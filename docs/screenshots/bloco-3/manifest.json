@@ -1,0 +1,77 @@
+{
+  "block": 3,
+  "title": "Fluxo de reserva (lessor)",
+  "capturedAt": "2026-05-22T13:25:57.729Z",
+  "baseUrl": "http://localhost:3000",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "routes": [
+    {
+      "path": "/private/booking/calendar?uid=6a10364c39e3a83cb3a83291",
+      "name": "booking-calendar",
+      "waitFor": "booking-calendar",
+      "dynamicPlaceUid": true,
+      "url": "http://localhost:3000/private/booking/calendar?uid=6a10364c39e3a83cb3a83291",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-3/booking-calendar.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/booking/hours?uid=6a10364c39e3a83cb3a83291",
+      "name": "booking-hours",
+      "waitFor": "booking-hours",
+      "dynamicPlaceUid": true,
+      "bookingStorage": "hours",
+      "url": "http://localhost:3000/private/booking/hours?uid=6a10364c39e3a83cb3a83291",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-3/booking-hours.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/booking/guests?uid=6a10364c39e3a83cb3a83291",
+      "name": "booking-guests",
+      "waitFor": "booking-guests",
+      "dynamicPlaceUid": true,
+      "bookingStorage": "guests",
+      "url": "http://localhost:3000/private/booking/guests?uid=6a10364c39e3a83cb3a83291",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-3/booking-guests.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/booking/confirm?uid=6a10364c39e3a83cb3a83291",
+      "name": "booking-confirm",
+      "waitFor": "booking-confirm",
+      "dynamicPlaceUid": true,
+      "bookingStorage": "confirm",
+      "url": "http://localhost:3000/private/booking/confirm?uid=6a10364c39e3a83cb3a83291",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-3/booking-confirm.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/reservations",
+      "name": "reservations",
+      "waitFor": "reservations",
+      "url": "http://localhost:3000/private/reservations",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-3/reservations.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/status-book/6a1035a71b152af8c921ba0c",
+      "name": "status-book-detail",
+      "waitFor": "status-book",
+      "dynamicBookingUid": true,
+      "url": "http://localhost:3000/private/status-book/6a1035a71b152af8c921ba0c",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-3/status-book-detail.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/status-book/cancel?uid=6a1035a71b152af8c921ba0c",
+      "name": "status-book-cancel",
+      "waitFor": "status-book-cancel",
+      "dynamicBookingQueryUid": true,
+      "url": "http://localhost:3000/private/status-book/cancel?uid=6a1035a71b152af8c921ba0c",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-3/status-book-cancel.png",
+      "status": "ok"
+    }
+  ]
+}

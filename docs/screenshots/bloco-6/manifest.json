@@ -1,0 +1,87 @@
+{
+  "block": 6,
+  "title": "Lessee — gestão de reservas",
+  "capturedAt": "2026-05-22T14:06:48.343Z",
+  "baseUrl": "http://localhost:3000",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "routes": [
+    {
+      "path": "/private/lessee/info-place/6a10364c39e3a83cb3a83291",
+      "name": "lessee-info-place",
+      "waitFor": "lessee-info-place",
+      "dynamicPlaceUid": true,
+      "url": "http://localhost:3000/private/lessee/info-place/6a10364c39e3a83cb3a83291",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-6/lessee-info-place.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/lessee/schedule",
+      "name": "lessee-schedule",
+      "waitFor": "lessee-schedule",
+      "url": "http://localhost:3000/private/lessee/schedule",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-6/lessee-schedule.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/lessee/schedule/status-guest",
+      "name": "lessee-schedule-status-guest",
+      "waitFor": "lessee-schedule-guest",
+      "url": "http://localhost:3000/private/lessee/schedule/status-guest",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-6/lessee-schedule-status-guest.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/lessee/approve-booking/6a1035a71b152af8c921b9dc",
+      "name": "lessee-approve-booking",
+      "waitFor": "lessee-booking-list",
+      "url": "http://localhost:3000/private/lessee/approve-booking/6a1035a71b152af8c921b9dc",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-6/lessee-approve-booking.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/lessee/approve-booking/approve/6a1035a71b152af8c921ba0c",
+      "name": "lessee-approve-detail",
+      "waitFor": "lessee-approve-detail",
+      "dynamicBookingUid": true,
+      "url": "http://localhost:3000/private/lessee/approve-booking/approve/6a1035a71b152af8c921ba0c",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-6/lessee-approve-detail.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/lessee/approve-booking/approve/confirmed",
+      "name": "lessee-approve-confirmed",
+      "waitFor": "lessee-approve-confirmed",
+      "url": "http://localhost:3000/private/lessee/approve-booking/approve/confirmed",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-6/lessee-approve-confirmed.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/lessee/approve-booking/approve/deny",
+      "name": "lessee-approve-deny",
+      "waitFor": "lessee-approve-deny",
+      "url": "http://localhost:3000/private/lessee/approve-booking/approve/deny",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-6/lessee-approve-deny.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/lessee/completed-booking/6a1035a71b152af8c921b9dc",
+      "name": "lessee-completed-booking",
+      "waitFor": "lessee-booking-list",
+      "url": "http://localhost:3000/private/lessee/completed-booking/6a1035a71b152af8c921b9dc",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-6/lessee-completed-booking.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/lessee/completed-booking/approve/6a1035a71b152af8c921ba0c",
+      "name": "lessee-completed-approve",
+      "waitFor": "lessee-completed-approve",
+      "dynamicBookingUid": true,
+      "url": "http://localhost:3000/private/lessee/completed-booking/approve/6a1035a71b152af8c921ba0c",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-6/lessee-completed-approve.png",
+      "status": "ok"
+    }
+  ]
+}
