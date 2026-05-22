@@ -1,0 +1,20 @@
+{
+  "block": 1,
+  "title": "Rotas públicas e autenticação",
+  "capturedAt": "2026-05-22T14:28:35.986Z",
+  "baseUrl": "http://localhost:3000",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "routes": [
+    {
+      "path": "/login",
+      "name": "login",
+      "waitFor": "login",
+      "url": "http://localhost:3000/login",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-1/login.png",
+      "status": "ok"
+    }
+  ]
+}
