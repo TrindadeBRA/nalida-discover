@@ -329,4 +329,4 @@ chat/[uid]               │
 | Bloco | Título | Entrada via |
 |-------|--------|-------------|
 | ← Bloco 2 | Home lessor (dashboard e espaços) | Botão "Reservar" vem de `/private/place` |
-| → Bloco 8 | Chat e mensagens | Botão "Conversar com o anfitrião" em `status-book/[uid]` |
+| → Bloco 4 | Conversas | Botão "Conversar com o anfitrião" em `status-book/[uid]` |
