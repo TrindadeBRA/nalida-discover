@@ -24,100 +24,100 @@
 
 | # | Funcionalidade | Frontend | Backend | Status |
 |---|----------------|:--------:|:-------:|:------:|
-| [1.1](#tela-login-principal----login) | Login com Google (OAuth) | ✅ | ✅ | Completo |
-| [1.2](#tela-login-com-e-mail----manual-login) | Login com e-mail e senha | ✅ | ⚠️ | Parcial |
-| [1.3](#tela-login-com-e-mail----manual-login) | Login com Apple | ❌ | ❌ | Ausente |
-| [1.4](#tela-login-com-e-mail----manual-login) | Login com Facebook | ❌ | ❌ | Ausente |
-| [1.5](#tela-entrada-do-cadastro----register) | Cadastro de novo usuário | ✅ | ⚠️ | Parcial |
-| [1.6](#tela-login-principal----login) | Logout e encerramento de sessão | ✅ | ✅ | Completo |
-| [1.7](#tela-login-principal----login) | Renovação automática de token (refresh) | ❌ | ⚠️ | Parcial |
-| [1.8](#tela-bloqueio-de-acesso----under-age) | Bloqueio de acesso para menores de 18 anos | ✅ | ❌ | Parcial |
-| [1.9](#tela-boas-vindas-e-geolocalização----welcome) | Boas-vindas e captura de geolocalização | ✅ | ❌ | Parcial |
-| [1.10](#tela-termos-de-privacidade----privacy) | Aceite dos termos de privacidade | ✅ | ❌ | Parcial |
-| [1.11](#tela-permissão-de-notificações----notifications) | Solicitação de permissão para notificações push | ✅ | ❌ | Ausente |
+| [1.1](#tela-login-principal) | Login com Google (OAuth) | ✅ | ✅ | Completo |
+| [1.2](#tela-login-email) | Login com e-mail e senha | ✅ | ⚠️ | Parcial |
+| [1.3](#tela-login-email) | Login com Apple | ❌ | ❌ | Ausente |
+| [1.4](#tela-login-email) | Login com Facebook | ❌ | ❌ | Ausente |
+| [1.5](#tela-register) | Cadastro de novo usuário | ✅ | ⚠️ | Parcial |
+| [1.6](#tela-login-principal) | Logout e encerramento de sessão | ✅ | ✅ | Completo |
+| [1.7](#tela-login-principal) | Renovação automática de token (refresh) | ❌ | ⚠️ | Parcial |
+| [1.8](#tela-under-age) | Bloqueio de acesso para menores de 18 anos | ✅ | ❌ | Parcial |
+| [1.9](#tela-welcome) | Boas-vindas e captura de geolocalização | ✅ | ❌ | Parcial |
+| [1.10](#tela-privacy) | Aceite dos termos de privacidade | ✅ | ❌ | Parcial |
+| [1.11](#tela-notifications) | Solicitação de permissão para notificações push | ✅ | ❌ | Ausente |
 
 ### Módulo 2 — Descoberta de Espaços
 
 | # | Funcionalidade | Frontend | Backend | Status |
 |---|----------------|:--------:|:-------:|:------:|
-| [2.1](#tela-dashboard-de-busca----private) | Listagem de espaços por categoria e proximidade | ✅ | ✅ | Completo |
-| [2.2](#tela-listagem-por-categoria----privatemoreuid) | Busca por texto (cidade ou bairro) | ✅ | ⚠️ | Parcial |
-| [2.3](#tela-listagem-por-categoria----privatemoreuid) | Filtros de preço, comodidades e distância | ✅ | ⚠️ | Parcial |
-| [2.4](#tela-listagem-por-categoria----privatemoreuid) | Visualização em mapa com marcadores | ✅ | ✅ | Completo |
-| [2.5](#tela-detalhe-do-espaço----privateplaceuid) | Detalhe completo do espaço | ✅ | ✅ | Completo |
-| [2.6](#tela-listagem-por-categoria----privatemoreuid) | Paginação de resultados | ✅ | ✅ | Completo |
-| [2.7](#tela-detalhe-do-espaço----privateplaceuid) | Avaliação média do espaço | ✅ | ✅ | Completo |
+| [2.1](#tela-private-home) | Listagem de espaços por categoria e proximidade | ✅ | ✅ | Completo |
+| [2.2](#tela-private-more) | Busca por texto (cidade ou bairro) | ✅ | ⚠️ | Parcial |
+| [2.3](#tela-private-more) | Filtros de preço, comodidades e distância | ✅ | ⚠️ | Parcial |
+| [2.4](#tela-private-more) | Visualização em mapa com marcadores | ✅ | ✅ | Completo |
+| [2.5](#tela-private-place) | Detalhe completo do espaço | ✅ | ✅ | Completo |
+| [2.6](#tela-private-more) | Paginação de resultados | ✅ | ✅ | Completo |
+| [2.7](#tela-private-place) | Avaliação média do espaço | ✅ | ✅ | Completo |
 
 ### Módulo 3 — Fluxo de Reserva
 
 | # | Funcionalidade | Frontend | Backend | Status |
 |---|----------------|:--------:|:-------:|:------:|
-| [3.1](#tela-seleção-de-datas----privatebookingcalendaruid) | Seleção de datas | ✅ | ✅ | Completo |
-| [3.2](#tela-seleção-de-horários----privatebookinghoursuid) | Seleção de horário de entrada e saída | ✅ | ✅ | Completo |
-| [3.3](#tela-seleção-de-datas----privatebookingcalendaruid) | Verificação de disponibilidade em tempo real | ✅ | ✅ | Completo |
-| [3.4](#tela-hóspedes-adicionais----privatebookingguestsuid) | Seleção de hóspedes adicionais | ✅ | ✅ | Completo |
-| [3.5](#tela-confirmação-e-pagamento----privatebookingconfirmuid) | Cálculo e exibição do valor total | ✅ | ⚠️ | Parcial |
-| [3.6](#tela-confirmação-e-pagamento----privatebookingconfirmuid) | Criação da reserva | ✅ | ✅ | Completo |
-| [3.7](#tela-confirmação-e-pagamento----privatebookingconfirmuid) | Processamento do pagamento | ✅ | ❌ | Ausente |
-| [3.8](#tela-detalhe-da-reserva----privatestatus-bookuid) | Acompanhamento do status da reserva | ✅ | ✅ | Completo |
-| [3.9](#tela-minhas-reservas----privatereservations) | Lista de reservas (ativas, inativas, anteriores) | ✅ | ✅ | Completo |
-| [3.10](#tela-minhas-reservas----privatereservations) | Avaliação do espaço após reserva concluída | ✅ | ✅ | Completo |
-| [3.11](#tela-cancelamento-de-reserva----privatestatus-bookcancel) | Cancelamento de reserva pelo locatário | ✅ | ⚠️ | Parcial |
+| [3.1](#tela-booking-calendar) | Seleção de datas | ✅ | ✅ | Completo |
+| [3.2](#tela-booking-hours) | Seleção de horário de entrada e saída | ✅ | ✅ | Completo |
+| [3.3](#tela-booking-calendar) | Verificação de disponibilidade em tempo real | ✅ | ✅ | Completo |
+| [3.4](#tela-booking-guests) | Seleção de hóspedes adicionais | ✅ | ✅ | Completo |
+| [3.5](#tela-booking-confirm) | Cálculo e exibição do valor total | ✅ | ⚠️ | Parcial |
+| [3.6](#tela-booking-confirm) | Criação da reserva | ✅ | ✅ | Completo |
+| [3.7](#tela-booking-confirm) | Processamento do pagamento | ✅ | ❌ | Ausente |
+| [3.8](#tela-status-book) | Acompanhamento do status da reserva | ✅ | ✅ | Completo |
+| [3.9](#tela-reservations) | Lista de reservas (ativas, inativas, anteriores) | ✅ | ✅ | Completo |
+| [3.10](#tela-reservations) | Avaliação do espaço após reserva concluída | ✅ | ✅ | Completo |
+| [3.11](#tela-status-book-cancel) | Cancelamento de reserva pelo locatário | ✅ | ⚠️ | Parcial |
 
 ### Módulo 4 — Mensagens e Conversas
 
 | # | Funcionalidade | Frontend | Backend | Status |
 |---|----------------|:--------:|:-------:|:------:|
-| [4.1](#tela-lista-de-conversas----privateconversations) | Lista de conversas (abertas e fechadas) | ✅ | ❌ | Parcial |
-| [4.2](#tela-chat-em-tempo-real----privateconversationschatuid) | Envio e recebimento de mensagens em tempo real | ✅ | ❌ | Parcial |
-| [4.3](#tela-chat-em-tempo-real----privateconversationschatuid) | Histórico de mensagens persistido | ✅ | ❌ | Parcial |
-| [4.4](#tela-chat-em-tempo-real----privateconversationschatuid) | Notificação de nova mensagem | ❌ | ❌ | Ausente |
+| [4.1](#tela-conversations) | Lista de conversas (abertas e fechadas) | ✅ | ❌ | Parcial |
+| [4.2](#tela-conversations-chat) | Envio e recebimento de mensagens em tempo real | ✅ | ❌ | Parcial |
+| [4.3](#tela-conversations-chat) | Histórico de mensagens persistido | ✅ | ❌ | Parcial |
+| [4.4](#tela-conversations-chat) | Notificação de nova mensagem | ❌ | ❌ | Ausente |
 
 ### Módulo 5 — Painel do Proprietário e Cadastro de Espaço
 
 | # | Funcionalidade | Frontend | Backend | Status |
 |---|----------------|:--------:|:-------:|:------:|
-| [5.1](#tela-meus-espaços----privatelesseemy-place) | Lista de espaços cadastrados | ✅ | ✅ | Completo |
-| [5.2](#tela-perguntas-frequentes----privatelesseefaq) | Perguntas frequentes (FAQ) | ✅ | ✅ | Completo |
-| [5.3](#etapa-1--informações-gerais-initial-info-10) | Cadastro — informações gerais | ✅ | ✅ | Completo |
-| [5.4](#etapa-2--endereço-address-20) | Cadastro — endereço com consulta por CEP | ✅ | ✅ | Completo |
-| [5.5](#etapa-3--disponibilidade-schedule-30) | Cadastro — disponibilidade e horários | ✅ | ✅ | Completo |
-| [5.6](#etapa-4--valores-por-diária-values-40) | Cadastro — valores e preços | ✅ | ✅ | Completo |
-| [5.7](#etapa-5--reserva-por-hora-hour-50) | Cadastro — reserva por hora | ✅ | ✅ | Completo |
-| [5.8](#etapa-6--desconto-para-longas-estadias-discount-60) | Cadastro — desconto para estadias longas | ✅ | ✅ | Completo |
-| [5.9](#etapa-7--configurações-do-espaço-space-configs-70) | Cadastro — configurações físicas e comodidades | ✅ | ✅ | Completo |
-| [5.10](#etapa-8--regras-e-política-rules-80) | Cadastro — regras, check-in e política de cancelamento | ✅ | ✅ | Completo |
-| [5.11](#etapa-9--preferências-de-hóspedes-guests-85) | Cadastro — preferências de hóspedes | ✅ | ✅ | Completo |
-| [5.12](#etapa-10--fotos-do-espaço-images-90) | Cadastro — upload de fotos | ✅ | ⚠️ | Parcial |
-| [5.13](#tela-de-confirmação--result-100) | Publicação do espaço | ✅ | ⚠️ | Parcial |
+| [5.1](#tela-lessee-my-place) | Lista de espaços cadastrados | ✅ | ✅ | Completo |
+| [5.2](#tela-lessee-faq) | Perguntas frequentes (FAQ) | ✅ | ✅ | Completo |
+| [5.3](#form-place-initial-info) | Cadastro — informações gerais | ✅ | ✅ | Completo |
+| [5.4](#form-place-address) | Cadastro — endereço com consulta por CEP | ✅ | ✅ | Completo |
+| [5.5](#form-place-schedule) | Cadastro — disponibilidade e horários | ✅ | ✅ | Completo |
+| [5.6](#form-place-values) | Cadastro — valores e preços | ✅ | ✅ | Completo |
+| [5.7](#form-place-hour) | Cadastro — reserva por hora | ✅ | ✅ | Completo |
+| [5.8](#form-place-discount) | Cadastro — desconto para estadias longas | ✅ | ✅ | Completo |
+| [5.9](#form-place-space-configs) | Cadastro — configurações físicas e comodidades | ✅ | ✅ | Completo |
+| [5.10](#form-place-rules) | Cadastro — regras, check-in e política de cancelamento | ✅ | ✅ | Completo |
+| [5.11](#form-place-guests) | Cadastro — preferências de hóspedes | ✅ | ✅ | Completo |
+| [5.12](#form-place-images) | Cadastro — upload de fotos | ✅ | ⚠️ | Parcial |
+| [5.13](#form-place-result) | Publicação do espaço | ✅ | ⚠️ | Parcial |
 
 ### Módulo 6 — Gestão de Reservas pelo Proprietário
 
 | # | Funcionalidade | Frontend | Backend | Status |
 |---|----------------|:--------:|:-------:|:------:|
-| [6.1](#tela-estatísticas-do-espaço----privatelesseeinfo-placeuid) | Estatísticas: reservas, faturamento e hóspedes | ✅ | ✅ | Completo |
-| [6.2](#tela-agenda-do-espaço----privatelesseeschedule) | Agenda visual do espaço | ✅ | ⚠️ | Parcial |
-| [6.3](#tela-detalhe-do-hóspede-no-dia----privatelesseeschedulestatus-guest) | Acompanhamento de presença do hóspede | ✅ | ⚠️ | Parcial |
-| [6.4](#tela-reservas-pendentes----privatelesseeapprove-bookinguid) | Reservas pendentes de aprovação | ✅ | ✅ | Completo |
-| [6.5](#tela-decisão-sobre-reserva----privatelesseeapprove-bookingapproveuid) | Aprovar reserva | ✅ | ✅ | Completo |
-| [6.6](#tela-negar-reserva----privatelesseeapprove-bookingapprovedeny) | Negar reserva com motivo | ✅ | ✅ | Completo |
-| [6.7](#tela-reservas-concluídas----privatelesseecompleted-bookinguid) | Reservas concluídas | ✅ | ✅ | Completo |
-| [6.8](#tela-avaliar-hóspede----privatelesseecompleted-bookingapproveuid) | Avaliação do hóspede após reserva | ✅ | ✅ | Completo |
+| [6.1](#tela-lessee-info-place) | Estatísticas: reservas, faturamento e hóspedes | ✅ | ✅ | Completo |
+| [6.2](#tela-lessee-schedule) | Agenda visual do espaço | ✅ | ⚠️ | Parcial |
+| [6.3](#tela-lessee-status-guest) | Acompanhamento de presença do hóspede | ✅ | ⚠️ | Parcial |
+| [6.4](#tela-approve-booking) | Reservas pendentes de aprovação | ✅ | ✅ | Completo |
+| [6.5](#tela-approve-booking-detail) | Aprovar reserva | ✅ | ✅ | Completo |
+| [6.6](#tela-approve-deny) | Negar reserva com motivo | ✅ | ✅ | Completo |
+| [6.7](#tela-completed-booking) | Reservas concluídas | ✅ | ✅ | Completo |
+| [6.8](#tela-completed-booking-approve) | Avaliação do hóspede após reserva | ✅ | ✅ | Completo |
 
 ### Módulo 7 — Perfil do Usuário
 
 | # | Funcionalidade | Frontend | Backend | Status |
 |---|----------------|:--------:|:-------:|:------:|
-| [7.1](#tela-dashboard-do-perfil----privateprofleuid) | Visualizar perfil próprio | ✅ | ✅ | Completo |
-| [7.2](#tela-editar-nome----privateproflenameduid) | Editar nome | ✅ | ✅ | Completo |
-| [7.3](#tela-editar-data-de-nascimento----privateprofilebirthday-uid) | Editar data de nascimento | ✅ | ⚠️ | Parcial |
-| [7.4](#tela-editar-endereço----privateprofileaddressuid) | Gerenciar endereços | ✅ | ✅ | Completo |
-| [7.5](#tela-métodos-de-pagamento----privateprofilepayment-method) | Adicionar cartão de crédito | ✅ | ✅ | Completo |
-| [7.6](#tela-métodos-de-pagamento----privateprofilepayment-method) | Remover cartão de crédito | ✅ | ✅ | Completo |
-| [7.7](#tela-dados-bancários----privateprofilereceiver-methoduid) | Cadastrar conta bancária para recebimento | ✅ | ⚠️ | Parcial |
-| [7.8](#tela-captura-do-documento----privateprofiledocumentpicture) | Verificação de identidade (documento + câmera) | ✅ | ❌ | Ausente |
-| [7.9](#tela-perfil-público-do-hóspede----privateprofileguest-profileuid) | Visualizar perfil público de outro usuário | ✅ | ✅ | Completo |
-| [7.10](#tela-dashboard-do-perfil----privateprofleuid) | Alternância entre modo cliente e host | ✅ | ✅ | Completo |
+| [7.1](#tela-profile) | Visualizar perfil próprio | ✅ | ✅ | Completo |
+| [7.2](#tela-profile-name) | Editar nome | ✅ | ✅ | Completo |
+| [7.3](#tela-profile-birthday) | Editar data de nascimento | ✅ | ⚠️ | Parcial |
+| [7.4](#tela-profile-address) | Gerenciar endereços | ✅ | ✅ | Completo |
+| [7.5](#tela-payment-method) | Adicionar cartão de crédito | ✅ | ✅ | Completo |
+| [7.6](#tela-payment-method) | Remover cartão de crédito | ✅ | ✅ | Completo |
+| [7.7](#tela-receiver-method) | Cadastrar conta bancária para recebimento | ✅ | ⚠️ | Parcial |
+| [7.8](#tela-profile-document-picture) | Verificação de identidade (documento + câmera) | ✅ | ❌ | Ausente |
+| [7.9](#tela-guest-profile) | Visualizar perfil público de outro usuário | ✅ | ✅ | Completo |
+| [7.10](#tela-profile) | Alternância entre modo cliente e host | ✅ | ✅ | Completo |
 
 ---
 
@@ -147,6 +147,8 @@ O toggle entre os modos é feito na tela de perfil e determina qual dashboard é
 
 ---
 
+<a id="tela-login-principal"></a>
+
 ### Tela: Login Principal — `/login`
 
 <img src="../docs/screenshots/bloco-1/login.png" alt="login" width="300" />
@@ -172,6 +174,8 @@ Ponto de entrada da plataforma. Concentra os métodos de autenticação disponí
 - Sem opção de "Esqueci minha senha"
 
 ---
+
+<a id="tela-login-email"></a>
 
 ### Tela: Login com E-mail — `/manual-login`
 
@@ -199,6 +203,8 @@ Formulário de autenticação tradicional com e-mail e senha cadastrados no Fire
 
 ---
 
+<a id="tela-register"></a>
+
 ### Tela: Entrada do Cadastro — `/register`
 
 <img src="../docs/screenshots/bloco-1/register.png" alt="register" width="300" />
@@ -209,6 +215,8 @@ Tela de entrada do fluxo de cadastro. Redireciona automaticamente para o step 1.
 **Status:** ✅ Completo (redirect)
 
 ---
+
+<a id="tela-register-step-one"></a>
 
 ### Tela: Cadastro — Etapa 1 — `/register/step-one`
 
@@ -233,6 +241,8 @@ Coleta e-mail e senha para criar a conta no Firebase Auth.
 - Nome e data de nascimento (step 2) não são enviados ao backend no upsert
 
 ---
+
+<a id="tela-register-step-two"></a>
 
 ### Tela: Cadastro — Etapa 2 — `/register/step-two`
 
@@ -259,6 +269,8 @@ Coleta nome completo e data de nascimento. Valida maioridade antes de prosseguir
 
 ---
 
+<a id="tela-under-age"></a>
+
 ### Tela: Bloqueio de Acesso — `/under-age`
 
 <img src="../docs/screenshots/bloco-1/under-age.png" alt="under-age" width="300" />
@@ -277,6 +289,8 @@ Tela terminal exibida quando o usuário informa menos de 18 anos.
 - Backend não armazena data de nascimento nem bloqueia a conta por idade
 
 ---
+
+<a id="tela-welcome"></a>
 
 ### Tela: Boas-vindas e Geolocalização — `/welcome`
 
@@ -297,6 +311,8 @@ Primeira tela após o login. Solicita permissão de geolocalização e direciona
 
 ---
 
+<a id="tela-privacy"></a>
+
 ### Tela: Termos de Privacidade — `/privacy`
 
 <img src="../docs/screenshots/bloco-1/privacy.png" alt="privacy" width="300" />
@@ -315,6 +331,8 @@ Exibe os termos de privacidade e registra o aceite do usuário.
 - Não auditável por usuário
 
 ---
+
+<a id="tela-notifications"></a>
 
 ### Tela: Permissão de Notificações — `/notifications`
 
@@ -393,6 +411,8 @@ Solicita autorização para envio de notificações push.
 
 ---
 
+<a id="tela-private-home"></a>
+
 ### Tela: Dashboard de Busca — `/private`
 
 <img src="../docs/screenshots/bloco-2/private-home.png" alt="private-home" width="300" />
@@ -424,6 +444,8 @@ Dashboard principal do modo lessor. Exibe espaços agrupados por categoria, prio
 
 ---
 
+<a id="tela-private-more"></a>
+
 ### Tela: Listagem por Categoria — `/private/more`
 
 <img src="../docs/screenshots/bloco-2/private-more.png" alt="private-more" width="300" />
@@ -452,6 +474,8 @@ Listagem completa de espaços de uma categoria. Oferece filtros avançados e alt
 - Busca por texto sem full-text search — apenas correspondência exata de campo
 
 ---
+
+<a id="tela-private-place"></a>
 
 ### Tela: Detalhe do Espaço — `/private/place?uid=`
 
@@ -526,6 +550,8 @@ Tela completa de informações de um espaço antes de iniciar a reserva.
 
 ### Sub-fluxo: Criação de Reserva
 
+<a id="tela-booking-calendar"></a>
+
 ### Tela: Seleção de Datas — `/private/booking/calendar?uid=`
 
 <img src="../docs/screenshots/bloco-3/booking-calendar.png" alt="booking-calendar" width="300" />
@@ -551,6 +577,8 @@ Etapa 1 de 4. Calendário interativo para seleção do período da reserva.
 
 ---
 
+<a id="tela-booking-hours"></a>
+
 ### Tela: Seleção de Horários — `/private/booking/hours?uid=`
 
 <img src="../docs/screenshots/bloco-3/booking-hours.png" alt="booking-hours" width="300" />
@@ -568,6 +596,8 @@ Etapa 2 de 4 (opcional). Seleção de horário de entrada e saída para espaços
 
 ---
 
+<a id="tela-booking-guests"></a>
+
 ### Tela: Hóspedes Adicionais — `/private/booking/guests?uid=`
 
 <img src="../docs/screenshots/bloco-3/booking-guests.png" alt="booking-guests" width="300" />
@@ -583,6 +613,8 @@ Etapa 3 de 4. Define quantos hóspedes adicionais além do titular utilizarão o
 **Status:** ✅ Completo
 
 ---
+
+<a id="tela-booking-confirm"></a>
 
 ### Tela: Confirmação e Pagamento — `/private/booking/confirm?uid=`
 
@@ -609,6 +641,8 @@ Etapa 4 de 4. Resumo completo da reserva com seleção de forma de pagamento.
 
 ### Sub-fluxo: Gestão de Reservas
 
+<a id="tela-reservations"></a>
+
 ### Tela: Minhas Reservas — `/private/reservations`
 
 <img src="../docs/screenshots/bloco-3/reservations.png" alt="reservations" width="300" />
@@ -630,6 +664,8 @@ Painel do locatário com todas as suas reservas organizadas por status.
 
 ---
 
+<a id="tela-status-book"></a>
+
 ### Tela: Detalhe da Reserva — `/private/status-book/[uid]`
 
 <img src="../docs/screenshots/bloco-3/status-book-detail.png" alt="status-book-detail" width="300" />
@@ -649,6 +685,8 @@ Detalhe completo de uma reserva com status visual e ações disponíveis.
 - Bug: botão "Cancelar reserva" aparece apenas para status `COMPLETED` — deveria ser `CONFIRMED`
 
 ---
+
+<a id="tela-status-book-cancel"></a>
 
 ### Tela: Cancelamento de Reserva — `/private/status-book/cancel`
 
@@ -720,6 +758,8 @@ booking/calendar ──► booking/hours (se allowsBookPerHour)
 
 ---
 
+<a id="tela-conversations"></a>
+
 ### Tela: Lista de Conversas — `/private/conversations`
 
 <img src="../docs/screenshots/bloco-4/conversations.png" alt="conversations" width="300" />
@@ -743,6 +783,8 @@ Lista de todas as conversas do usuário, filtradas por modo ativo e status.
 - Dependência total do Firebase RTDB — sem backup no MongoDB
 
 ---
+
+<a id="tela-conversations-chat"></a>
 
 ### Tela: Chat em Tempo Real — `/private/conversations/chat/[uid]`
 
@@ -801,6 +843,8 @@ Rota de entrada do modo lessee. Redirect automático para `/private/lessee/my-pl
 
 ---
 
+<a id="tela-lessee-my-place"></a>
+
 ### Tela: Meus Espaços — `/private/lessee/my-place`
 
 <img src="../docs/screenshots/bloco-5/lessee-my-place.png" alt="lessee-my-place" width="300" />
@@ -817,6 +861,8 @@ Dashboard principal do proprietário. Lista todos os espaços cadastrados com a�
 **Status:** ✅ Completo
 
 ---
+
+<a id="tela-lessee-faq"></a>
 
 ### Tela: Perguntas Frequentes — `/private/lessee/faq`
 
@@ -835,6 +881,8 @@ FAQ para proprietários com cards expansíveis. Conteúdo estático.
 
 ---
 
+<a id="form-place-initial-info"></a>
+
 #### Etapa 1 — Informações Gerais `initial-info` (10%)
 
 <img src="../docs/screenshots/bloco-5/form-place-initial-info.png" alt="form-place-initial-info" width="300" />
@@ -851,6 +899,8 @@ FAQ para proprietários com cards expansíveis. Conteúdo estático.
 
 ---
 
+<a id="form-place-address"></a>
+
 #### Etapa 2 — Endereço `address` (20%)
 
 <img src="../docs/screenshots/bloco-5/form-place-address.png" alt="form-place-address" width="300" />
@@ -866,6 +916,8 @@ FAQ para proprietários com cards expansíveis. Conteúdo estático.
 
 ---
 
+<a id="form-place-schedule"></a>
+
 #### Etapa 3 — Disponibilidade `schedule` (30%)
 
 <img src="../docs/screenshots/bloco-5/form-place-schedule.png" alt="form-place-schedule" width="300" />
@@ -880,6 +932,8 @@ FAQ para proprietários com cards expansíveis. Conteúdo estático.
 
 ---
 
+<a id="form-place-values"></a>
+
 #### Etapa 4 — Valores por Diária `values` (40%)
 
 <img src="../docs/screenshots/bloco-5/form-place-values.png" alt="form-place-values" width="300" />
@@ -893,6 +947,8 @@ FAQ para proprietários com cards expansíveis. Conteúdo estático.
 **Status:** ✅ Completo
 
 ---
+
+<a id="form-place-hour"></a>
 
 #### Etapa 5 — Reserva por Hora `hour` (50%)
 
@@ -909,6 +965,8 @@ FAQ para proprietários com cards expansíveis. Conteúdo estático.
 
 ---
 
+<a id="form-place-discount"></a>
+
 #### Etapa 6 — Desconto para Longas Estadias `discount` (60%)
 
 <img src="../docs/screenshots/bloco-5/form-place-discount.png" alt="form-place-discount" width="300" />
@@ -922,6 +980,8 @@ FAQ para proprietários com cards expansíveis. Conteúdo estático.
 **Status:** ✅ Completo
 
 ---
+
+<a id="form-place-space-configs"></a>
 
 #### Etapa 7 — Configurações do Espaço `space-configs` (70%)
 
@@ -938,6 +998,8 @@ FAQ para proprietários com cards expansíveis. Conteúdo estático.
 
 ---
 
+<a id="form-place-rules"></a>
+
 #### Etapa 8 — Regras e Política `rules` (80%)
 
 <img src="../docs/screenshots/bloco-5/form-place-rules.png" alt="form-place-rules" width="300" />
@@ -953,6 +1015,8 @@ FAQ para proprietários com cards expansíveis. Conteúdo estático.
 
 ---
 
+<a id="form-place-guests"></a>
+
 #### Etapa 9 — Preferências de Hóspedes `guests` (85%)
 
 <img src="../docs/screenshots/bloco-5/form-place-guests.png" alt="form-place-guests" width="300" />
@@ -964,6 +1028,8 @@ FAQ para proprietários com cards expansíveis. Conteúdo estático.
 **Status:** ✅ Completo
 
 ---
+
+<a id="form-place-images"></a>
 
 #### Etapa 10 — Fotos do Espaço `images` (90%)
 
@@ -983,6 +1049,8 @@ FAQ para proprietários com cards expansíveis. Conteúdo estático.
 - Sem moderação de conteúdo
 
 ---
+
+<a id="form-place-result"></a>
 
 #### Tela de Confirmação — `result` (100%)
 
@@ -1029,6 +1097,8 @@ Confirmação de criação ou edição bem-sucedida. Limpa o `localStorage` ao c
 
 ---
 
+<a id="tela-lessee-info-place"></a>
+
 ### Tela: Estatísticas do Espaço — `/private/lessee/info-place/[uid]`
 
 <img src="../docs/screenshots/bloco-6/lessee-info-place.png" alt="lessee-info-place" width="300" />
@@ -1050,6 +1120,8 @@ Dashboard de métricas com gráficos dos últimos 6 meses.
 
 ---
 
+<a id="tela-lessee-schedule"></a>
+
 ### Tela: Agenda do Espaço — `/private/lessee/schedule`
 
 <img src="../docs/screenshots/bloco-6/lessee-schedule.png" alt="lessee-schedule" width="300" />
@@ -1070,6 +1142,8 @@ Calendário de reservas com marcação de dias ocupados e estatísticas mensais.
 
 ---
 
+<a id="tela-lessee-status-guest"></a>
+
 ### Tela: Detalhe do Hóspede no Dia — `/private/lessee/schedule/status-guest`
 
 <img src="../docs/screenshots/bloco-6/lessee-schedule-status-guest.png" alt="lessee-schedule-status-guest" width="300" />
@@ -1089,6 +1163,8 @@ Detalhes de uma reserva do ponto de vista do proprietário no dia da estadia.
 
 ---
 
+<a id="tela-approve-booking"></a>
+
 ### Tela: Reservas Pendentes — `/private/lessee/approve-booking/[uid]`
 
 <img src="../docs/screenshots/bloco-6/lessee-approve-booking.png" alt="lessee-approve-booking" width="300" />
@@ -1103,6 +1179,8 @@ Lista de reservas com status `PENDING` aguardando decisão do proprietário.
 **Status:** ✅ Completo
 
 ---
+
+<a id="tela-approve-booking-detail"></a>
 
 ### Tela: Decisão sobre Reserva — `/private/lessee/approve-booking/approve/[uid]`
 
@@ -1120,6 +1198,8 @@ Tela de confirmação ou negação de uma reserva pendente.
 
 ---
 
+<a id="tela-approve-confirmed"></a>
+
 ### Tela: Reserva Confirmada — `/private/lessee/approve-booking/approve/confirmed`
 
 <img src="../docs/screenshots/bloco-6/lessee-approve-confirmed.png" alt="lessee-approve-confirmed" width="300" />
@@ -1130,6 +1210,8 @@ Feedback visual após confirmação bem-sucedida.
 **Status:** ✅ Completo
 
 ---
+
+<a id="tela-approve-deny"></a>
 
 ### Tela: Negar Reserva — `/private/lessee/approve-booking/approve/deny`
 
@@ -1150,6 +1232,8 @@ Fluxo de negação com campo de motivo e confirmação.
 
 ---
 
+<a id="tela-completed-booking"></a>
+
 ### Tela: Reservas Concluídas — `/private/lessee/completed-booking/[uid]`
 
 <img src="../docs/screenshots/bloco-6/lessee-completed-booking.png" alt="lessee-completed-booking" width="300" />
@@ -1160,6 +1244,8 @@ Lista de reservas com status `COMPLETED` para o espaço.
 **Status:** ✅ Completo
 
 ---
+
+<a id="tela-completed-booking-approve"></a>
 
 ### Tela: Avaliar Hóspede — `/private/lessee/completed-booking/approve/[uid]`
 
@@ -1203,6 +1289,8 @@ Formulário de avaliação do hóspede após conclusão da reserva.
 
 ---
 
+<a id="tela-profile"></a>
+
 ### Tela: Dashboard do Perfil — `/private/profile/[uid]`
 
 <img src="../docs/screenshots/bloco-7/profile.png" alt="profile" width="300" />
@@ -1222,6 +1310,8 @@ Central de gerenciamento do perfil. Agrega todos os dados do usuário com links 
 
 ---
 
+<a id="tela-profile-name"></a>
+
 ### Tela: Editar Nome — `/private/profile/name/[uid]`
 
 <img src="../docs/screenshots/bloco-7/profile-name.png" alt="profile-name" width="300" />
@@ -1233,6 +1323,8 @@ Central de gerenciamento do perfil. Agrega todos os dados do usuário com links 
 **Status:** ✅ Completo
 
 ---
+
+<a id="tela-profile-birthday"></a>
 
 ### Tela: Editar Data de Nascimento — `/private/profile/birthday/[uid]`
 
@@ -1249,6 +1341,8 @@ Central de gerenciamento do perfil. Agrega todos os dados do usuário com links 
 
 ---
 
+<a id="tela-profile-address"></a>
+
 ### Tela: Editar Endereço — `/private/profile/address/[uid]`
 
 <img src="../docs/screenshots/bloco-7/profile-address.png" alt="profile-address" width="300" />
@@ -1263,6 +1357,8 @@ Central de gerenciamento do perfil. Agrega todos os dados do usuário com links 
 
 ---
 
+<a id="tela-profile-document"></a>
+
 ### Tela: Verificação de Documento — `/private/profile/document/[uid]`
 
 <img src="../docs/screenshots/bloco-7/profile-document.png" alt="profile-document" width="300" />
@@ -1275,6 +1371,8 @@ Central de gerenciamento do perfil. Agrega todos os dados do usuário com links 
 
 ---
 
+<a id="tela-profile-document-confirm"></a>
+
 ### Tela: Instruções de Captura — `/private/profile/document/confirm`
 
 <img src="../docs/screenshots/bloco-7/profile-document-confirm.png" alt="profile-document-confirm" width="300" />
@@ -1285,6 +1383,8 @@ Tela informativa antes da captura. Orienta o usuário sobre como fotografar o do
 **Status:** ✅ Completo
 
 ---
+
+<a id="tela-profile-document-picture"></a>
 
 ### Tela: Captura do Documento — `/private/profile/document/picture`
 
@@ -1304,6 +1404,8 @@ Tela informativa antes da captura. Orienta o usuário sobre como fotografar o do
 
 ---
 
+<a id="tela-payment-method"></a>
+
 ### Tela: Métodos de Pagamento — `/private/profile/payment-method`
 
 <img src="../docs/screenshots/bloco-7/profile-payment-method.png" alt="profile-payment-method" width="300" />
@@ -1317,6 +1419,8 @@ Tela informativa antes da captura. Orienta o usuário sobre como fotografar o do
 **Status:** ✅ Completo
 
 ---
+
+<a id="tela-payment-create"></a>
 
 ### Tela: Cadastrar Cartão — `/private/profile/payment-method/create`
 
@@ -1335,6 +1439,8 @@ Tela informativa antes da captura. Orienta o usuário sobre como fotografar o do
 
 ---
 
+<a id="tela-payment-edit"></a>
+
 ### Tela: Editar Cartão — `/private/profile/payment-method/edit`
 
 <img src="../docs/screenshots/bloco-7/profile-payment-edit.png" alt="profile-payment-edit" width="300" />
@@ -1346,6 +1452,8 @@ Tela informativa antes da captura. Orienta o usuário sobre como fotografar o do
 **Status:** ✅ Completo
 
 ---
+
+<a id="tela-receiver-method"></a>
 
 ### Tela: Dados Bancários — `/private/profile/receiver-method/[uid]`
 
@@ -1364,6 +1472,8 @@ Tela informativa antes da captura. Orienta o usuário sobre como fotografar o do
 - Sem validação de conta bancária real (Pix / Open Finance)
 
 ---
+
+<a id="tela-guest-profile"></a>
 
 ### Tela: Perfil Público do Hóspede — `/private/profile/guest-profile/[uid]`
 
