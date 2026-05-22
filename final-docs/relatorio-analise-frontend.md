@@ -18,15 +18,106 @@
 
 ---
 
-## Índice
+## Índice de Funcionalidades
 
-1. [Módulo 1 — Autenticação e Acesso](#módulo-1--autenticação-e-acesso)
-2. [Módulo 2 — Descoberta de Espaços](#módulo-2--descoberta-de-espaços)
-3. [Módulo 3 — Fluxo de Reserva](#módulo-3--fluxo-de-reserva)
-4. [Módulo 4 — Mensagens e Conversas](#módulo-4--mensagens-e-conversas)
-5. [Módulo 5 — Painel do Proprietário e Cadastro de Espaço](#módulo-5--painel-do-proprietário-e-cadastro-de-espaço)
-6. [Módulo 6 — Gestão de Reservas pelo Proprietário](#módulo-6--gestão-de-reservas-pelo-proprietário)
-7. [Módulo 7 — Perfil do Usuário](#módulo-7--perfil-do-usuário)
+### Módulo 1 — Autenticação e Acesso
+
+| # | Funcionalidade | Frontend | Backend | Status |
+|---|----------------|:--------:|:-------:|:------:|
+| [1.1](#tela-login-principal----login) | Login com Google (OAuth) | ✅ | ✅ | Completo |
+| [1.2](#tela-login-com-e-mail----manual-login) | Login com e-mail e senha | ✅ | ⚠️ | Parcial |
+| [1.3](#tela-login-com-e-mail----manual-login) | Login com Apple | ❌ | ❌ | Ausente |
+| [1.4](#tela-login-com-e-mail----manual-login) | Login com Facebook | ❌ | ❌ | Ausente |
+| [1.5](#tela-entrada-do-cadastro----register) | Cadastro de novo usuário | ✅ | ⚠️ | Parcial |
+| [1.6](#tela-login-principal----login) | Logout e encerramento de sessão | ✅ | ✅ | Completo |
+| [1.7](#tela-login-principal----login) | Renovação automática de token (refresh) | ❌ | ⚠️ | Parcial |
+| [1.8](#tela-bloqueio-de-acesso----under-age) | Bloqueio de acesso para menores de 18 anos | ✅ | ❌ | Parcial |
+| [1.9](#tela-boas-vindas-e-geolocalização----welcome) | Boas-vindas e captura de geolocalização | ✅ | ❌ | Parcial |
+| [1.10](#tela-termos-de-privacidade----privacy) | Aceite dos termos de privacidade | ✅ | ❌ | Parcial |
+| [1.11](#tela-permissão-de-notificações----notifications) | Solicitação de permissão para notificações push | ✅ | ❌ | Ausente |
+
+### Módulo 2 — Descoberta de Espaços
+
+| # | Funcionalidade | Frontend | Backend | Status |
+|---|----------------|:--------:|:-------:|:------:|
+| [2.1](#tela-dashboard-de-busca----private) | Listagem de espaços por categoria e proximidade | ✅ | ✅ | Completo |
+| [2.2](#tela-listagem-por-categoria----privatemoreuid) | Busca por texto (cidade ou bairro) | ✅ | ⚠️ | Parcial |
+| [2.3](#tela-listagem-por-categoria----privatemoreuid) | Filtros de preço, comodidades e distância | ✅ | ⚠️ | Parcial |
+| [2.4](#tela-listagem-por-categoria----privatemoreuid) | Visualização em mapa com marcadores | ✅ | ✅ | Completo |
+| [2.5](#tela-detalhe-do-espaço----privateplaceuid) | Detalhe completo do espaço | ✅ | ✅ | Completo |
+| [2.6](#tela-listagem-por-categoria----privatemoreuid) | Paginação de resultados | ✅ | ✅ | Completo |
+| [2.7](#tela-detalhe-do-espaço----privateplaceuid) | Avaliação média do espaço | ✅ | ✅ | Completo |
+
+### Módulo 3 — Fluxo de Reserva
+
+| # | Funcionalidade | Frontend | Backend | Status |
+|---|----------------|:--------:|:-------:|:------:|
+| [3.1](#tela-seleção-de-datas----privatebookingcalendaruid) | Seleção de datas | ✅ | ✅ | Completo |
+| [3.2](#tela-seleção-de-horários----privatebookinghoursuid) | Seleção de horário de entrada e saída | ✅ | ✅ | Completo |
+| [3.3](#tela-seleção-de-datas----privatebookingcalendaruid) | Verificação de disponibilidade em tempo real | ✅ | ✅ | Completo |
+| [3.4](#tela-hóspedes-adicionais----privatebookingguestsuid) | Seleção de hóspedes adicionais | ✅ | ✅ | Completo |
+| [3.5](#tela-confirmação-e-pagamento----privatebookingconfirmuid) | Cálculo e exibição do valor total | ✅ | ⚠️ | Parcial |
+| [3.6](#tela-confirmação-e-pagamento----privatebookingconfirmuid) | Criação da reserva | ✅ | ✅ | Completo |
+| [3.7](#tela-confirmação-e-pagamento----privatebookingconfirmuid) | Processamento do pagamento | ✅ | ❌ | Ausente |
+| [3.8](#tela-detalhe-da-reserva----privatestatus-bookuid) | Acompanhamento do status da reserva | ✅ | ✅ | Completo |
+| [3.9](#tela-minhas-reservas----privatereservations) | Lista de reservas (ativas, inativas, anteriores) | ✅ | ✅ | Completo |
+| [3.10](#tela-minhas-reservas----privatereservations) | Avaliação do espaço após reserva concluída | ✅ | ✅ | Completo |
+| [3.11](#tela-cancelamento-de-reserva----privatestatus-bookcancel) | Cancelamento de reserva pelo locatário | ✅ | ⚠️ | Parcial |
+
+### Módulo 4 — Mensagens e Conversas
+
+| # | Funcionalidade | Frontend | Backend | Status |
+|---|----------------|:--------:|:-------:|:------:|
+| [4.1](#tela-lista-de-conversas----privateconversations) | Lista de conversas (abertas e fechadas) | ✅ | ❌ | Parcial |
+| [4.2](#tela-chat-em-tempo-real----privateconversationschatuid) | Envio e recebimento de mensagens em tempo real | ✅ | ❌ | Parcial |
+| [4.3](#tela-chat-em-tempo-real----privateconversationschatuid) | Histórico de mensagens persistido | ✅ | ❌ | Parcial |
+| [4.4](#tela-chat-em-tempo-real----privateconversationschatuid) | Notificação de nova mensagem | ❌ | ❌ | Ausente |
+
+### Módulo 5 — Painel do Proprietário e Cadastro de Espaço
+
+| # | Funcionalidade | Frontend | Backend | Status |
+|---|----------------|:--------:|:-------:|:------:|
+| [5.1](#tela-meus-espaços----privatelesseemy-place) | Lista de espaços cadastrados | ✅ | ✅ | Completo |
+| [5.2](#tela-perguntas-frequentes----privatelesseefaq) | Perguntas frequentes (FAQ) | ✅ | ✅ | Completo |
+| [5.3](#etapa-1--informações-gerais-initial-info-10) | Cadastro — informações gerais | ✅ | ✅ | Completo |
+| [5.4](#etapa-2--endereço-address-20) | Cadastro — endereço com consulta por CEP | ✅ | ✅ | Completo |
+| [5.5](#etapa-3--disponibilidade-schedule-30) | Cadastro — disponibilidade e horários | ✅ | ✅ | Completo |
+| [5.6](#etapa-4--valores-por-diária-values-40) | Cadastro — valores e preços | ✅ | ✅ | Completo |
+| [5.7](#etapa-5--reserva-por-hora-hour-50) | Cadastro — reserva por hora | ✅ | ✅ | Completo |
+| [5.8](#etapa-6--desconto-para-longas-estadias-discount-60) | Cadastro — desconto para estadias longas | ✅ | ✅ | Completo |
+| [5.9](#etapa-7--configurações-do-espaço-space-configs-70) | Cadastro — configurações físicas e comodidades | ✅ | ✅ | Completo |
+| [5.10](#etapa-8--regras-e-política-rules-80) | Cadastro — regras, check-in e política de cancelamento | ✅ | ✅ | Completo |
+| [5.11](#etapa-9--preferências-de-hóspedes-guests-85) | Cadastro — preferências de hóspedes | ✅ | ✅ | Completo |
+| [5.12](#etapa-10--fotos-do-espaço-images-90) | Cadastro — upload de fotos | ✅ | ⚠️ | Parcial |
+| [5.13](#tela-de-confirmação--result-100) | Publicação do espaço | ✅ | ⚠️ | Parcial |
+
+### Módulo 6 — Gestão de Reservas pelo Proprietário
+
+| # | Funcionalidade | Frontend | Backend | Status |
+|---|----------------|:--------:|:-------:|:------:|
+| [6.1](#tela-estatísticas-do-espaço----privatelesseeinfo-placeuid) | Estatísticas: reservas, faturamento e hóspedes | ✅ | ✅ | Completo |
+| [6.2](#tela-agenda-do-espaço----privatelesseeschedule) | Agenda visual do espaço | ✅ | ⚠️ | Parcial |
+| [6.3](#tela-detalhe-do-hóspede-no-dia----privatelesseeschedulestatus-guest) | Acompanhamento de presença do hóspede | ✅ | ⚠️ | Parcial |
+| [6.4](#tela-reservas-pendentes----privatelesseeapprove-bookinguid) | Reservas pendentes de aprovação | ✅ | ✅ | Completo |
+| [6.5](#tela-decisão-sobre-reserva----privatelesseeapprove-bookingapproveuid) | Aprovar reserva | ✅ | ✅ | Completo |
+| [6.6](#tela-negar-reserva----privatelesseeapprove-bookingapprovedeny) | Negar reserva com motivo | ✅ | ✅ | Completo |
+| [6.7](#tela-reservas-concluídas----privatelesseecompleted-bookinguid) | Reservas concluídas | ✅ | ✅ | Completo |
+| [6.8](#tela-avaliar-hóspede----privatelesseecompleted-bookingapproveuid) | Avaliação do hóspede após reserva | ✅ | ✅ | Completo |
+
+### Módulo 7 — Perfil do Usuário
+
+| # | Funcionalidade | Frontend | Backend | Status |
+|---|----------------|:--------:|:-------:|:------:|
+| [7.1](#tela-dashboard-do-perfil----privateprofleuid) | Visualizar perfil próprio | ✅ | ✅ | Completo |
+| [7.2](#tela-editar-nome----privateproflenameduid) | Editar nome | ✅ | ✅ | Completo |
+| [7.3](#tela-editar-data-de-nascimento----privateprofilebirthday-uid) | Editar data de nascimento | ✅ | ⚠️ | Parcial |
+| [7.4](#tela-editar-endereço----privateprofileaddressuid) | Gerenciar endereços | ✅ | ✅ | Completo |
+| [7.5](#tela-métodos-de-pagamento----privateprofilepayment-method) | Adicionar cartão de crédito | ✅ | ✅ | Completo |
+| [7.6](#tela-métodos-de-pagamento----privateprofilepayment-method) | Remover cartão de crédito | ✅ | ✅ | Completo |
+| [7.7](#tela-dados-bancários----privateprofilereceiver-methoduid) | Cadastrar conta bancária para recebimento | ✅ | ⚠️ | Parcial |
+| [7.8](#tela-captura-do-documento----privateprofiledocumentpicture) | Verificação de identidade (documento + câmera) | ✅ | ❌ | Ausente |
+| [7.9](#tela-perfil-público-do-hóspede----privateprofileguest-profileuid) | Visualizar perfil público de outro usuário | ✅ | ✅ | Completo |
+| [7.10](#tela-dashboard-do-perfil----privateprofleuid) | Alternância entre modo cliente e host | ✅ | ✅ | Completo |
 
 ---
 
