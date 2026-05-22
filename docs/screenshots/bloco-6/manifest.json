@@ -1,7 +1,7 @@
 {
   "block": 6,
   "title": "Lessee — gestão de reservas",
-  "capturedAt": "2026-05-22T14:06:48.343Z",
+  "capturedAt": "2026-05-22T19:26:00.057Z",
   "baseUrl": "http://localhost:3000",
   "viewport": {
     "width": 390,
@@ -9,77 +9,54 @@
   },
   "routes": [
     {
-      "path": "/private/lessee/info-place/6a10364c39e3a83cb3a83291",
-      "name": "lessee-info-place",
-      "waitFor": "lessee-info-place",
-      "dynamicPlaceUid": true,
-      "url": "http://localhost:3000/private/lessee/info-place/6a10364c39e3a83cb3a83291",
-      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-6/lessee-info-place.png",
-      "status": "ok"
-    },
-    {
-      "path": "/private/lessee/schedule",
+      "path": "/private/lessee/schedule?uid=6a109d6d21db80015bf9d648",
       "name": "lessee-schedule",
       "waitFor": "lessee-schedule",
-      "url": "http://localhost:3000/private/lessee/schedule",
+      "dynamicSchedulePlaceUid": true,
+      "url": "http://localhost:3000/private/lessee/schedule?uid=6a109d6d21db80015bf9d648",
       "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-6/lessee-schedule.png",
       "status": "ok"
     },
     {
-      "path": "/private/lessee/schedule/status-guest",
+      "path": "/private/lessee/schedule/status-guest?uid=6a109d6d21db80015bf9d64e",
       "name": "lessee-schedule-status-guest",
       "waitFor": "lessee-schedule-guest",
-      "url": "http://localhost:3000/private/lessee/schedule/status-guest",
+      "dynamicScheduleBookingUid": true,
+      "url": "http://localhost:3000/private/lessee/schedule/status-guest?uid=6a109d6d21db80015bf9d64e",
       "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-6/lessee-schedule-status-guest.png",
       "status": "ok"
     },
     {
-      "path": "/private/lessee/approve-booking/6a1035a71b152af8c921b9dc",
+      "path": "/private/lessee/approve-booking/6a109d6d21db80015bf9d60e",
       "name": "lessee-approve-booking",
       "waitFor": "lessee-booking-list",
-      "url": "http://localhost:3000/private/lessee/approve-booking/6a1035a71b152af8c921b9dc",
+      "url": "http://localhost:3000/private/lessee/approve-booking/6a109d6d21db80015bf9d60e",
       "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-6/lessee-approve-booking.png",
       "status": "ok"
     },
     {
-      "path": "/private/lessee/approve-booking/approve/6a1035a71b152af8c921ba0c",
+      "path": "/private/lessee/approve-booking/approve/6a109d6d21db80015bf9d64d",
       "name": "lessee-approve-detail",
       "waitFor": "lessee-approve-detail",
-      "dynamicBookingUid": true,
-      "url": "http://localhost:3000/private/lessee/approve-booking/approve/6a1035a71b152af8c921ba0c",
+      "dynamicPendingBookingUid": true,
+      "url": "http://localhost:3000/private/lessee/approve-booking/approve/6a109d6d21db80015bf9d64d",
       "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-6/lessee-approve-detail.png",
       "status": "ok"
     },
     {
-      "path": "/private/lessee/approve-booking/approve/confirmed",
-      "name": "lessee-approve-confirmed",
-      "waitFor": "lessee-approve-confirmed",
-      "url": "http://localhost:3000/private/lessee/approve-booking/approve/confirmed",
-      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-6/lessee-approve-confirmed.png",
-      "status": "ok"
-    },
-    {
-      "path": "/private/lessee/approve-booking/approve/deny",
-      "name": "lessee-approve-deny",
-      "waitFor": "lessee-approve-deny",
-      "url": "http://localhost:3000/private/lessee/approve-booking/approve/deny",
-      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-6/lessee-approve-deny.png",
-      "status": "ok"
-    },
-    {
-      "path": "/private/lessee/completed-booking/6a1035a71b152af8c921b9dc",
+      "path": "/private/lessee/completed-booking/6a109d6d21db80015bf9d60e",
       "name": "lessee-completed-booking",
       "waitFor": "lessee-booking-list",
-      "url": "http://localhost:3000/private/lessee/completed-booking/6a1035a71b152af8c921b9dc",
+      "url": "http://localhost:3000/private/lessee/completed-booking/6a109d6d21db80015bf9d60e",
       "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-6/lessee-completed-booking.png",
       "status": "ok"
     },
     {
-      "path": "/private/lessee/completed-booking/approve/6a1035a71b152af8c921ba0c",
+      "path": "/private/lessee/completed-booking/approve/6a109d6d21db80015bf9d650",
       "name": "lessee-completed-approve",
       "waitFor": "lessee-completed-approve",
       "dynamicBookingUid": true,
-      "url": "http://localhost:3000/private/lessee/completed-booking/approve/6a1035a71b152af8c921ba0c",
+      "url": "http://localhost:3000/private/lessee/completed-booking/approve/6a109d6d21db80015bf9d650",
       "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-6/lessee-completed-approve.png",
       "status": "ok"
     }
