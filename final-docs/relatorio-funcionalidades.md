@@ -1,5 +1,3 @@
-# placeholder
-
 # Relatório de Funcionalidades — Nalida Web
 
 **Produto:** Nalida — Plataforma de Aluguel de Espaços Comerciais
