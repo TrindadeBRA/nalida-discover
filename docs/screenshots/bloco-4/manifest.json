@@ -1,0 +1,29 @@
+{
+  "block": 4,
+  "title": "Conversas",
+  "capturedAt": "2026-05-22T13:37:45.434Z",
+  "baseUrl": "http://localhost:3000",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "routes": [
+    {
+      "path": "/private/conversations",
+      "name": "conversations",
+      "waitFor": "conversations",
+      "url": "http://localhost:3000/private/conversations",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-4/conversations.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/conversations/chat/6a103662212256c2bffabf97",
+      "name": "conversations-chat",
+      "waitFor": "conversations-chat",
+      "dynamicChatTargetUid": true,
+      "url": "http://localhost:3000/private/conversations/chat/6a103662212256c2bffabf97",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-4/conversations-chat.png",
+      "status": "ok"
+    }
+  ]
+}

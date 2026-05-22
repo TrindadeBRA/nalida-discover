@@ -1,0 +1,98 @@
+{
+  "block": 7,
+  "title": "Perfil do usuário",
+  "capturedAt": "2026-05-22T14:08:46.520Z",
+  "baseUrl": "http://localhost:3000",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "routes": [
+    {
+      "path": "/private/profile/6a1035a71b152af8c921b9dc",
+      "name": "profile",
+      "waitFor": "profile",
+      "url": "http://localhost:3000/private/profile/6a1035a71b152af8c921b9dc",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-7/profile.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/profile/name/6a1035a71b152af8c921b9dc",
+      "name": "profile-name",
+      "url": "http://localhost:3000/private/profile/name/6a1035a71b152af8c921b9dc",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-7/profile-name.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/profile/birthday/6a1035a71b152af8c921b9dc",
+      "name": "profile-birthday",
+      "url": "http://localhost:3000/private/profile/birthday/6a1035a71b152af8c921b9dc",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-7/profile-birthday.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/profile/address/6a1035a71b152af8c921b9dc",
+      "name": "profile-address",
+      "url": "http://localhost:3000/private/profile/address/6a1035a71b152af8c921b9dc",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-7/profile-address.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/profile/document/6a1035a71b152af8c921b9dc",
+      "name": "profile-document",
+      "url": "http://localhost:3000/private/profile/document/6a1035a71b152af8c921b9dc",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-7/profile-document.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/profile/document/confirm",
+      "name": "profile-document-confirm",
+      "url": "http://localhost:3000/private/profile/document/confirm",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-7/profile-document-confirm.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/profile/document/picture",
+      "name": "profile-document-picture",
+      "url": "http://localhost:3000/private/profile/document/picture",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-7/profile-document-picture.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/profile/payment-method",
+      "name": "profile-payment-method",
+      "url": "http://localhost:3000/private/profile/payment-method",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-7/profile-payment-method.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/profile/payment-method/create",
+      "name": "profile-payment-create",
+      "url": "http://localhost:3000/private/profile/payment-method/create",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-7/profile-payment-create.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/profile/payment-method/edit?uid=55acb8e0c523400bbb42e70c4f3403bc",
+      "name": "profile-payment-edit",
+      "waitFor": "profile-payment",
+      "url": "http://localhost:3000/private/profile/payment-method/edit?uid=55acb8e0c523400bbb42e70c4f3403bc",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-7/profile-payment-edit.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/profile/receiver-method/6a1035a71b152af8c921b9dc",
+      "name": "profile-receiver-method",
+      "url": "http://localhost:3000/private/profile/receiver-method/6a1035a71b152af8c921b9dc",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-7/profile-receiver-method.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/profile/guest-profile/6a1035a71b152af8c921b9dc",
+      "name": "profile-guest-profile",
+      "url": "http://localhost:3000/private/profile/guest-profile/6a1035a71b152af8c921b9dc",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-7/profile-guest-profile.png",
+      "status": "ok"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "block": 2,
+  "title": "Home lessor (dashboard e espaços)",
+  "capturedAt": "2026-05-22T11:34:34.971Z",
+  "baseUrl": "http://localhost:3000",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "routes": [
+    {
+      "path": "/private",
+      "name": "private-home",
+      "waitFor": "places",
+      "url": "http://localhost:3000/private",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-2/private-home.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/more?category=Cl%C3%ADnicas%20de%20Sa%C3%BAde&slug=clinica-de-saude",
+      "name": "private-more",
+      "waitFor": "places",
+      "url": "http://localhost:3000/private/more?category=Cl%C3%ADnicas%20de%20Sa%C3%BAde&slug=clinica-de-saude",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-2/private-more.png",
+      "status": "ok"
+    },
+    {
+      "path": "/private/place?uid=6a1035a71b152af8c921ba05",
+      "name": "private-place",
+      "waitFor": "place-detail",
+      "dynamicPlaceUid": true,
+      "url": "http://localhost:3000/private/place?uid=6a1035a71b152af8c921ba05",
+      "file": "/Users/allancuypers/Documents/Projetos Pessoais/nalida-app-monorepo/apps/nalida-web/screenshots/bloco-2/private-place.png",
+      "status": "ok"
+    }
+  ]
+}
