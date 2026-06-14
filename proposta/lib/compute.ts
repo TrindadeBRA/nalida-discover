@@ -35,6 +35,7 @@ export function summarizeModule(
       summary.deferredCount += 1;
     } else {
       summary.removedCount += 1;
+      summary.removedHours = (summary.removedHours ?? 0) + (feature.originalHours ?? 0);
     }
   }
 
@@ -66,6 +67,7 @@ export function computeTotals(
     totals.includedCount += s.includedCount;
     totals.deferredCount += s.deferredCount;
     totals.removedCount += s.removedCount;
+    totals.removedHours = (totals.removedHours ?? 0) + (s.removedHours ?? 0);
     totals.totalCount += s.totalCount;
   }
 

@@ -96,6 +96,10 @@ export function validateMvpData(data: unknown): MvpData {
           complexity: complexity as Complexity,
           hours,
           ...(feat.isNew === true ? { isNew: true } : {}),
+          ...(feat.isBackoffice === true ? { isBackoffice: true } : {}),
+          ...(typeof feat.originalHours === "number" && feat.originalHours > 0
+            ? { originalHours: feat.originalHours }
+            : {}),
           ...(typeof feat.notes === "string" && feat.notes.trim()
             ? { notes: feat.notes }
             : {}),

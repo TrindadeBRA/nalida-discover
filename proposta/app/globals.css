@@ -27,6 +27,8 @@
   --manter-soft: rgba(210, 153, 34, 0.16);
   --remover: #f85149;
   --remover-soft: rgba(248, 81, 73, 0.12);
+  --backoffice: #f5963b;
+  --backoffice-soft: rgba(245, 150, 59, 0.14);
 
   --radius: 12px;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.25);
@@ -155,7 +157,7 @@ a {
 /* ---------- KPI cards ---------- */
 .kpis {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr 2fr;
   gap: 16px;
   margin: 32px 0;
 }
@@ -165,6 +167,11 @@ a {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .kpi__label {
@@ -179,6 +186,80 @@ a {
   font-weight: 700;
   margin-top: 6px;
   letter-spacing: -0.02em;
+}
+
+.kpi__value--removed   { color: var(--remover); }
+.kpi__value--backoffice { color: var(--backoffice); }
+
+/* ---------- Quick links card ---------- */
+.kpi--links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.quick-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.quick-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-elev-2);
+  color: var(--text-dim);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.quick-link:hover {
+  border-color: var(--brand-mid);
+  color: var(--text);
+  background: var(--brand-soft);
+}
+
+.quick-link__icon {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  color: var(--text-faint);
+  transition: color 0.15s ease;
+}
+
+.quick-link:hover .quick-link__icon {
+  color: var(--brand-mid);
+}
+
+.quick-link__text {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.quick-link__arrow {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  color: var(--text-faint);
+  opacity: 0;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.quick-link:hover .quick-link__arrow {
+  opacity: 1;
+  color: var(--brand-mid);
 }
 
 .kpi__hint {
@@ -252,6 +333,7 @@ a {
 .dot--adiar   { background: var(--deferred); }
 .dot--remover { background: var(--remover); }
 .dot--novo    { background: var(--novo); }
+.dot--backoffice { background: var(--backoffice); }
 
 /* ---------- Module ---------- */
 .module {
@@ -330,10 +412,11 @@ a {
 .minibar__removed  { background: var(--remover); }
 /* category-based segments */
 .minibar__seg { display: block; height: 100%; }
-.minibar__seg--manter  { background: var(--manter); }
-.minibar__seg--novo    { background: var(--novo); }
-.minibar__seg--adiar   { background: var(--deferred); }
-.minibar__seg--remover { background: var(--remover); }
+.minibar__seg--manter    { background: var(--manter); }
+.minibar__seg--novo      { background: var(--novo); }
+.minibar__seg--adiar     { background: var(--deferred); }
+.minibar__seg--remover   { background: var(--remover); }
+.minibar__seg--backoffice { background: var(--backoffice); }
 
 .module__body {
   border-top: 1px solid var(--border);
@@ -391,10 +474,11 @@ a {
 .badge--included { background: var(--included-soft); color: var(--included); }
 .badge--deferred { background: var(--deferred-soft); color: var(--deferred); }
 .badge--removed  { background: var(--removed-soft);  color: var(--removed); }
-.badge--manter   { background: var(--manter-soft);   color: var(--manter); }
-.badge--adiar    { background: var(--deferred-soft);  color: var(--deferred); }
-.badge--remover  { background: var(--remover-soft);   color: var(--remover); }
-.badge--novo     { background: var(--novo-soft);      color: var(--novo); }
+.badge--manter   { background: var(--manter-soft);      color: var(--manter); }
+.badge--adiar    { background: var(--deferred-soft);     color: var(--deferred); }
+.badge--remover  { background: var(--remover-soft);      color: var(--remover); }
+.badge--novo     { background: var(--novo-soft);         color: var(--novo); }
+.badge--backoffice { background: var(--backoffice-soft); color: var(--backoffice); }
 
 .cx {
   font-size: 11px;

@@ -1,6 +1,6 @@
 {
   "project": {
-    "name": "Nalida MVP!",
+    "name": "Nalida APP",
     "subtitle": "Plataforma de Aluguel de Espaços Comerciais",
     "vendor": "TrinityWeb",
     "stack": [
@@ -16,7 +16,7 @@
     "currency": "BRL",
     "sheetId": "1I-L9yvpaWduEiCHTM3GkfhvrfYU1kg9h-nCtK_9scT8",
     "sheetGid": "552375468",
-    "lastSyncedAt": "2026-06-14T16:16:31.989Z"
+    "lastSyncedAt": "2026-06-14T16:38:55.182Z"
   },
   "legend": {
     "included": "Faz parte do MVP — será desenvolvido nesta fase",
@@ -34,7 +34,8 @@
           "name": "Login com Google (OAuth)",
           "decision": "removed",
           "complexity": "P",
-          "hours": 0
+          "hours": 0,
+          "originalHours": 3
         },
         {
           "code": "1.2",
@@ -48,14 +49,16 @@
           "name": "Login com Apple",
           "decision": "removed",
           "complexity": "P",
-          "hours": 0
+          "hours": 0,
+          "originalHours": 3
         },
         {
           "code": "1.4",
           "name": "Login com Facebook",
           "decision": "removed",
           "complexity": "P",
-          "hours": 0
+          "hours": 0,
+          "originalHours": 3
         },
         {
           "code": "1.5",
@@ -100,6 +103,30 @@
           "hours": 4,
           "isNew": true,
           "notes": "Redefinição de senha por email"
+        },
+        {
+          "code": "1.11",
+          "name": "Login / Esqueci a senha",
+          "decision": "included",
+          "complexity": "M",
+          "hours": 6,
+          "isBackoffice": true
+        },
+        {
+          "code": "1.12",
+          "name": "Área logada",
+          "decision": "included",
+          "complexity": "P",
+          "hours": 3,
+          "isBackoffice": true
+        },
+        {
+          "code": "1.13",
+          "name": "Listagem / Visualização / Edição de Usuários - Admin",
+          "decision": "included",
+          "complexity": "P",
+          "hours": 4,
+          "isBackoffice": true
         }
       ]
     },
@@ -128,7 +155,8 @@
           "name": "Solicitação de permissão para notificações push",
           "decision": "removed",
           "complexity": "P",
-          "hours": 0
+          "hours": 0,
+          "originalHours": 6
         },
         {
           "code": "2.4",
@@ -197,6 +225,22 @@
           "decision": "included",
           "complexity": "M",
           "hours": 2
+        },
+        {
+          "code": "3.8",
+          "name": "Listagem dos imoveis - Admin",
+          "decision": "included",
+          "complexity": "P",
+          "hours": 4,
+          "isBackoffice": true
+        },
+        {
+          "code": "3.9",
+          "name": "Detalhes dos imoveis - Admin",
+          "decision": "included",
+          "complexity": "P",
+          "hours": 4,
+          "isBackoffice": true
         }
       ]
     },
@@ -274,6 +318,22 @@
           "decision": "included",
           "complexity": "M",
           "hours": 4
+        },
+        {
+          "code": "4.11",
+          "name": "Listagem das Reservas - Admin",
+          "decision": "included",
+          "complexity": "P",
+          "hours": 4,
+          "isBackoffice": true
+        },
+        {
+          "code": "4.12",
+          "name": "Detalhes das Reservas - Admin",
+          "decision": "included",
+          "complexity": "P",
+          "hours": 4,
+          "isBackoffice": true
         }
       ]
     },
@@ -386,6 +446,14 @@
           "decision": "included",
           "complexity": "M",
           "hours": 4
+        },
+        {
+          "code": "6.13",
+          "name": "CRUD de comodidades (nome e icone) - Admin",
+          "decision": "included",
+          "complexity": "M",
+          "hours": 5,
+          "isBackoffice": true
         }
       ]
     },
@@ -546,7 +614,8 @@
           "name": "Notificação de nova mensagem",
           "decision": "removed",
           "complexity": "M",
-          "hours": 0
+          "hours": 0,
+          "originalHours": 6
         },
         {
           "code": "9.4",
@@ -556,6 +625,14 @@
           "hours": 4,
           "isNew": true,
           "notes": "Validar se nao houve email disparado de msg nos ultimo X tempo"
+        },
+        {
+          "code": "9.5",
+          "name": "Listagem / Visualização de todos os chats - Admin",
+          "decision": "included",
+          "complexity": "P",
+          "hours": 4,
+          "isBackoffice": true
         }
       ]
     },
@@ -569,7 +646,7 @@
           "name": "Visualizar perfil próprio",
           "decision": "included",
           "complexity": "M",
-          "hours": 6
+          "hours": 4
         },
         {
           "code": "10.2",
@@ -632,7 +709,8 @@
           "name": "Alternância entre modo cliente e host",
           "decision": "removed",
           "complexity": "M",
-          "hours": 0
+          "hours": 0,
+          "originalHours": 6
         }
       ]
     },
@@ -688,21 +766,24 @@
           "name": "Push: reserva aprovada",
           "decision": "removed",
           "complexity": "M",
-          "hours": 0
+          "hours": 0,
+          "originalHours": 5
         },
         {
           "code": "12.2",
           "name": "Push: nova reserva pendente (proprietário)",
           "decision": "removed",
           "complexity": "M",
-          "hours": 0
+          "hours": 0,
+          "originalHours": 5
         },
         {
           "code": "12.3",
           "name": "Push: nova mensagem no chat",
           "decision": "removed",
           "complexity": "M",
-          "hours": 0
+          "hours": 0,
+          "originalHours": 5
         },
         {
           "code": "12.1",
@@ -812,20 +893,6 @@
           "decision": "included",
           "complexity": "M",
           "hours": 4
-        }
-      ]
-    },
-    {
-      "id": "backoffice-painel-administrativo",
-      "name": "Backoffice / Painel administrativo",
-      "description": "",
-      "features": [
-        {
-          "code": "14.1",
-          "name": "Login",
-          "decision": "included",
-          "complexity": "M",
-          "hours": 6
         }
       ]
     }

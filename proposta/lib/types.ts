@@ -8,8 +8,10 @@ export interface Feature {
   decision: Decision;
   complexity: Complexity;
   hours: number;
+  originalHours?: number;
   notes?: string;
   isNew?: boolean;
+  isBackoffice?: boolean;
 }
 
 export interface Module {
@@ -50,6 +52,7 @@ export interface ModuleSummary {
   name: string;
   includedHours: number;
   deferredHours: number;
+  removedHours?: number;
   includedCount: number;
   deferredCount: number;
   removedCount: number;
@@ -59,6 +62,7 @@ export interface ModuleSummary {
 export interface Totals {
   includedHours: number;
   deferredHours: number;
+  removedHours?: number;
   includedCount: number;
   deferredCount: number;
   removedCount: number;

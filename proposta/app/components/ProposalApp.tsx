@@ -14,6 +14,7 @@ const FILTERS: { key: FilterKey; label: string; cat?: Category }[] = [
   { key: "all", label: "Todas" },
   { key: "manter", label: CATEGORY_LABEL.manter, cat: "manter" },
   { key: "novo", label: CATEGORY_LABEL.novo, cat: "novo" },
+  { key: "backoffice", label: CATEGORY_LABEL.backoffice, cat: "backoffice" },
   { key: "remover", label: CATEGORY_LABEL.remover, cat: "remover" },
 ];
 
@@ -29,6 +30,8 @@ export function ProposalApp({ initialData }: { initialData: MvpData }) {
 
   const totals = useMemo(() => computeTotals(data, filter), [data, filter]);
   const totalsAll = useMemo(() => computeTotals(data, "all"), [data]);
+  const totalsBackoffice = useMemo(() => computeTotals(data, "backoffice"), [data]);
+  const totalsRemoved = useMemo(() => computeTotals(data, "remover"), [data]);
   const summaries = useMemo(
     () => Object.fromEntries(data.modules.map((m) => [m.id, summarizeModule(m, filter)])),
     [data, filter]
@@ -168,14 +171,6 @@ export function ProposalApp({ initialData }: { initialData: MvpData }) {
             onChange={(v) => patchProject({ approach: v })}
           />
 
-          <div className="stack">
-            {project.stack.map((s) => (
-              <span className="stack__chip" key={s}>
-                {s}
-              </span>
-            ))}
-          </div>
-
           {edit && (
             <ProjectParams project={project} onChange={patchProject} />
           )}
@@ -196,9 +191,15 @@ export function ProposalApp({ initialData }: { initialData: MvpData }) {
             <div className="kpi__label">
               {filter === "all" ? "Esforço do MVP" : `Esforço · ${CATEGORY_LABEL[filter as Category] ?? "Todas"}`}
             </div>
-            <div className="kpi__value">{totals.includedHours}h</div>
+            <div className="kpi__value">
+              {filter === "remover"
+                ? `${totals.removedHours ?? 0}h`
+                : `${totals.includedHours}h`}
+            </div>
             <div className="kpi__hint">
-              ~{totals.estimatedDays} dias úteis ({project.hoursPerDay}h/dia)
+              {filter === "remover"
+                ? `${totals.removedCount} itens removidos`
+                : `~${totals.estimatedDays} dias úteis (${project.hoursPerDay}h/dia)`}
             </div>
           </div>
           <div className="kpi">
@@ -210,19 +211,56 @@ export function ProposalApp({ initialData }: { initialData: MvpData }) {
               {formatCurrency(project.hourlyRate, project.currency)}/hora
             </div>
           </div>
-          <div className="kpi">
-            <div className="kpi__label">
-              {filter === "all" ? "Funcionalidades no MVP" : `Itens · ${CATEGORY_LABEL[filter as Category] ?? "Todas"}`}
+          <div className="kpi kpi--links">
+            <div className="kpi__label">Links úteis</div>
+            <div className="quick-links">
+              <a
+                href="https://docs.google.com/spreadsheets/d/1I-L9yvpaWduEiCHTM3GkfhvrfYU1kg9h-nCtK_9scT8/edit?gid=552375468#gid=552375468"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="quick-link"
+              >
+                <svg className="quick-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <path d="M3 9h18M9 21V9"/>
+                </svg>
+                <span className="quick-link__text">Planilha de requisitos</span>
+                <svg className="quick-link__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M7 17L17 7M17 7H7M17 7v10"/>
+                </svg>
+              </a>
+              <a
+                href="https://github.com/TrindadeBRA/nalida-discover/blob/master/final-docs/relatorio-analise-frontend.md#tela-profile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="quick-link"
+              >
+                <svg className="quick-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2"/>
+                  <path d="M8 21h8M12 17v4"/>
+                </svg>
+                <span className="quick-link__text">Relatório de interfaces</span>
+                <svg className="quick-link__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M7 17L17 7M17 7H7M17 7v10"/>
+                </svg>
+              </a>
+              <a
+                href="https://github.com/TrindadeBRA/nalida-discover/blob/master/final-docs/relatorio-funcionalidades.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="quick-link"
+              >
+                <svg className="quick-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/>
+                  <rect x="9" y="3" width="6" height="4" rx="1"/>
+                  <path d="M9 12h6M9 16h4"/>
+                </svg>
+                <span className="quick-link__text">Relatório de funcionalidades</span>
+                <svg className="quick-link__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M7 17L17 7M17 7H7M17 7v10"/>
+                </svg>
+              </a>
             </div>
-            <div className="kpi__value">{totals.totalCount}</div>
-            <div className="kpi__hint">de {totalsAll.totalCount} avaliadas</div>
-          </div>
-          <div className="kpi">
-            <div className="kpi__label">Adiadas / Removidas</div>
-            <div className="kpi__value">
-              {totals.deferredCount} / {totals.removedCount}
-            </div>
-            <div className="kpi__hint">{totals.deferredHours}h adiadas para a v2</div>
           </div>
         </section>
 

@@ -14,7 +14,7 @@ interface Props {
 
 /** Computes per-category hours from the visible feature list. */
 function categoryHours(features: ReturnType<typeof Array.prototype.filter>) {
-  const acc: Record<Category, number> = { manter: 0, novo: 0, adiar: 0, remover: 0 };
+  const acc: Record<Category, number> = { manter: 0, novo: 0, adiar: 0, remover: 0, backoffice: 0 };
   for (const f of features as Array<{ hours: number; decision: string; isNew?: boolean }>) {
     const cat = featureCategory(f as Parameters<typeof featureCategory>[0]);
     // removed items carry 0 h — give them a fixed visual weight so they show on the bar
@@ -23,7 +23,7 @@ function categoryHours(features: ReturnType<typeof Array.prototype.filter>) {
   return acc;
 }
 
-const CAT_ORDER: Category[] = ["manter", "novo", "adiar", "remover"];
+const CAT_ORDER: Category[] = ["manter", "novo", "backoffice", "adiar", "remover"];
 
 // Visual weight for removed items (they have 0 h but must appear on bar)
 const REMOVED_VISUAL_H = 6;
@@ -55,11 +55,13 @@ export function ModuleCard({ module, summary, filter }: Props) {
   // --- header hours label ---
   const headerHours =
     filter === "remover"
-      ? `${removedCount}`
+      ? `${summary.removedHours ?? 0}h`
       : filter === "novo"
       ? `${catH.novo}h`
       : filter === "adiar"
       ? `${catH.adiar}h`
+      : filter === "backoffice"
+      ? `${catH.backoffice}h`
       : `${summary.includedHours}h`;
 
   const headerLabel =
@@ -69,6 +71,8 @@ export function ModuleCard({ module, summary, filter }: Props) {
       ? "novos"
       : filter === "adiar"
       ? "adiadas"
+      : filter === "backoffice"
+      ? "backoffice"
       : "no MVP";
 
   return (

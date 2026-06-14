@@ -64,6 +64,7 @@ const ACTION_TO_DECISION: Record<string, Decision> = {
   remover: "removed",
   adiar: "deferred",
   novo: "included",
+  backoffice: "included",
 };
 
 function slugify(text: string): string {
@@ -142,19 +143,23 @@ export function csvToMvp(csv: string): { modules: Module[]; totalFeatures: numbe
     if (feature && current) {
       const action = feature.action.toLowerCase();
       const isNew = action === "novo";
+      const isBackoffice = action === "backoffice";
 
       // Skip placeholder rows that were never filled in (e.g. "[NOVO] — inserir…").
       if (/^\[novo\]/i.test(feature.name)) continue;
 
       const decision = ACTION_TO_DECISION[action] ?? "included";
+      const isRemoved = decision === "removed";
 
       current.features.push({
         code: feature.code,
         name: feature.name,
         decision,
         complexity: inferComplexity(feature.hours),
-        hours: decision === "removed" ? 0 : feature.hours,
+        hours: isRemoved ? 0 : feature.hours,
+        ...(isRemoved && feature.hours > 0 ? { originalHours: feature.hours } : {}),
         ...(isNew ? { isNew: true } : {}),
+        ...(isBackoffice ? { isBackoffice: true } : {}),
         ...(feature.notes ? { notes: feature.notes } : {}),
       });
       totalFeatures++;
