@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useState, type ReactNode } from "react";
 import type { MvpData, Project } from "@/lib/types";
 import { computeTotals, summarizeModule, formatCurrency } from "@/lib/compute";
 import { updateProject } from "@/lib/mutations";
@@ -18,7 +18,7 @@ const FILTERS: { key: FilterKey; label: string; cat?: Category }[] = [
   { key: "remover", label: CATEGORY_LABEL.remover, cat: "remover" },
 ];
 
-export function ProposalApp({ initialData }: { initialData: MvpData }) {
+export function ProposalApp({ initialData, archDiagram }: { initialData: MvpData; archDiagram?: React.ReactNode }) {
   const [data, setData] = useState<MvpData>(initialData);
   const [edit, setEdit] = useState(false);
   const [filter, setFilter] = useState<FilterKey>("all");
@@ -176,6 +176,8 @@ export function ProposalApp({ initialData }: { initialData: MvpData }) {
           )}
         </div>
       </header>
+
+      {archDiagram}
 
       <div className="container">
         {error && <div className="alert alert--error">{error}</div>}
