@@ -76,72 +76,88 @@ function ArchNode({ data }: NodeProps) {
 const nodeTypes = { arch: ArchNode };
 
 /* ─── nodes ───────────────────────────────────────── */
+// Layout em 4 camadas horizontais, centradas num canvas de ~960px
+//
+//  Camada 0 (y=0):    VPS
+//  Camada 1 (y=160):  Portal | API Core | Backoffice
+//  Camada 1b(y=160):  App Mobile (abaixo do Portal, y=300)
+//  Camada 2 (y=460):  PostgreSQL
+//  Camada 3 (y=620):  R2 | Gateway | Leaflet | SMTP
+
+const CX = { // x centers por coluna
+  left:   80,   // Portal / Mobile
+  center: 400,  // API / Postgres
+  right:  720,  // Backoffice
+};
+
 const NODES = [
-  /* ── Camada 0: Infraestrutura ── */
+  /* ── Camada 0: Infra ── */
   {
     id: "vps",
     type: "arch",
-    position: { x: 400, y: 0 },
+    position: { x: CX.center, y: 0 },
     data: { label: "VPS", sub: "Ubuntu · Nginx reverse proxy", icon: "🖥", color: C.textDim, handles: ["bottom"] },
   },
 
-  /* ── Camada 1: Aplicações ── */
+  /* ── Camada 1: Frontends ── */
   {
     id: "portal",
     type: "arch",
-    position: { x: 40, y: 170 },
+    position: { x: CX.left, y: 160 },
     data: { label: "Portal", sub: "Next.js · App Router", icon: "🌐", color: C.green, handles: ["top","bottom","right"] },
-  },
-  {
-    id: "mobile",
-    type: "arch",
-    position: { x: 40, y: 320 },
-    data: { label: "App Mobile", sub: "React Native · WebView", icon: "📱", color: C.green, handles: ["top","right"] },
   },
   {
     id: "api",
     type: "arch",
-    position: { x: 380, y: 230 },
+    position: { x: CX.center, y: 160 },
     data: { label: "API Core", sub: "Node.js · Express · Prisma", icon: "⚙️", color: C.lime, handles: ["top","bottom","left","right"] },
   },
   {
     id: "backoffice",
     type: "arch",
-    position: { x: 720, y: 170 },
+    position: { x: CX.right, y: 160 },
     data: { label: "Backoffice", sub: "React · Vite", icon: "🛠", color: C.orange, handles: ["top","left","bottom"] },
   },
 
-  /* ── Camada 2: Banco de dados ── */
+  /* ── App Mobile: abaixo do Portal ── */
+  {
+    id: "mobile",
+    type: "arch",
+    position: { x: CX.left, y: 320 },
+    data: { label: "App Mobile", sub: "React Native · WebView", icon: "📱", color: C.green, handles: ["top","right"] },
+  },
+
+  /* ── Camada 2: Banco ── */
   {
     id: "postgres",
     type: "arch",
-    position: { x: 380, y: 430 },
-    data: { label: "PostgreSQL", sub: "Banco de dados relacional · Prisma ORM", icon: "🐘", color: "#336791", handles: ["top","bottom"] },
+    position: { x: CX.center, y: 460 },
+    data: { label: "PostgreSQL", sub: "Relacional · Prisma ORM", icon: "🐘", color: "#336791", handles: ["top","bottom"] },
   },
 
   /* ── Camada 3: Serviços externos ── */
   {
     id: "r2",
     type: "arch",
-    position: { x: 0, y: 610 },
+    position: { x: 0, y: 640 },
     data: { label: "Cloudflare R2", sub: "Buckets · Storage", icon: "☁️", color: C.blue, handles: ["top"] },
   },
   {
     id: "gateway",
     type: "arch",
-    position: { x: 220, y: 610 },
+    position: { x: 240, y: 640 },
     data: { label: "Asaas / Pagar.me", sub: "Gateway de Pagamento", icon: "💳", color: C.purple, handles: ["top"] },
   },
   {
     id: "leaflet",
     type: "arch",
-    position: { x: 450, y: 610 },
+    position: { x: 480, y: 640 },
     data: { label: "Leaflet + Nominatim", sub: "Mapas · Geocoding (free)", icon: "🗺", color: C.greenMid, handles: ["top"] },
   },
   {
     id: "email",
     type: "arch",
-    position: { x: 680, y: 610 },
+    position: { x: 720, y: 640 },
     data: { label: "SMTP / Resend", sub: "E-mails transacionais", icon: "✉️", color: C.textDim, handles: ["top"] },
   },
 ];
@@ -150,30 +166,40 @@ const edgeBase = { animated: true, style: { strokeWidth: 1.8 } };
 
 const EDGES = [
   /* VPS → apps */
-  { id: "vps-portal",     source: "vps",       target: "portal",     ...edgeBase, style: { ...edgeBase.style, stroke: C.green } },
-  { id: "vps-api",        source: "vps",       target: "api",        ...edgeBase, style: { ...edgeBase.style, stroke: C.lime } },
-  { id: "vps-bo",         source: "vps",       target: "backoffice", ...edgeBase, style: { ...edgeBase.style, stroke: C.orange } },
+  { id: "vps-portal", source: "vps",        target: "portal",     ...edgeBase, style: { ...edgeBase.style, stroke: C.green } },
+  { id: "vps-api",    source: "vps",        target: "api",        ...edgeBase, style: { ...edgeBase.style, stroke: C.lime } },
+  { id: "vps-bo",     source: "vps",        target: "backoffice", ...edgeBase, style: { ...edgeBase.style, stroke: C.orange } },
 
-  /* Mobile: carrega o portal via WebView */
-  { id: "mobile-portal",  source: "mobile",    target: "portal",     ...edgeBase, style: { ...edgeBase.style, stroke: C.green, strokeDasharray: "5 3" }, label: "WebView", labelStyle: { fill: C.textDim, fontSize: 10 } },
+  /* Mobile ← Portal (WebView) */
+  { id: "mobile-portal", source: "mobile",  target: "portal",     ...edgeBase,
+    style: { ...edgeBase.style, stroke: C.green, strokeDasharray: "5 3" },
+    label: "WebView", labelStyle: { fill: C.textDim, fontSize: 10 } },
 
-  /* Portal ↔ API */
-  { id: "portal-api",     source: "portal",    target: "api",        ...edgeBase, style: { ...edgeBase.style, stroke: C.green },  label: "REST / JSON", labelStyle: { fill: C.textDim, fontSize: 10 } },
+  /* Portal → API */
+  { id: "portal-api", source: "portal",     target: "api",        ...edgeBase,
+    style: { ...edgeBase.style, stroke: C.green },
+    label: "REST / JSON", labelStyle: { fill: C.textDim, fontSize: 10 } },
 
-  /* Backoffice ↔ API */
-  { id: "bo-api",         source: "backoffice", target: "api",       ...edgeBase, style: { ...edgeBase.style, stroke: C.orange }, label: "REST / JSON", labelStyle: { fill: C.textDim, fontSize: 10 } },
+  /* Backoffice → API */
+  { id: "bo-api",     source: "backoffice", target: "api",        ...edgeBase,
+    style: { ...edgeBase.style, stroke: C.orange },
+    label: "REST / JSON", labelStyle: { fill: C.textDim, fontSize: 10 } },
 
   /* API → PostgreSQL */
-  { id: "api-pg",         source: "api",       target: "postgres",   ...edgeBase, style: { ...edgeBase.style, stroke: "#336791", strokeWidth: 2.2 }, label: "Prisma ORM", labelStyle: { fill: C.textDim, fontSize: 10 } },
+  { id: "api-pg",     source: "api",        target: "postgres",   ...edgeBase,
+    style: { ...edgeBase.style, stroke: "#336791", strokeWidth: 2.2 },
+    label: "Prisma ORM", labelStyle: { fill: C.textDim, fontSize: 10 } },
 
   /* API → serviços */
-  { id: "api-r2",         source: "api",       target: "r2",         ...edgeBase, style: { ...edgeBase.style, stroke: C.blue } },
-  { id: "api-gateway",    source: "api",       target: "gateway",    ...edgeBase, style: { ...edgeBase.style, stroke: C.purple } },
-  { id: "api-leaflet",    source: "api",       target: "leaflet",    ...edgeBase, style: { ...edgeBase.style, stroke: C.greenMid } },
-  { id: "api-email",      source: "api",       target: "email",      ...edgeBase, style: { ...edgeBase.style, stroke: C.textDim } },
+  { id: "api-r2",      source: "api", target: "r2",      ...edgeBase, style: { ...edgeBase.style, stroke: C.blue } },
+  { id: "api-gateway", source: "api", target: "gateway", ...edgeBase, style: { ...edgeBase.style, stroke: C.purple } },
+  { id: "api-leaflet", source: "api", target: "leaflet", ...edgeBase, style: { ...edgeBase.style, stroke: C.greenMid } },
+  { id: "api-email",   source: "api", target: "email",   ...edgeBase, style: { ...edgeBase.style, stroke: C.textDim } },
 
   /* Portal → R2 (upload direto) */
-  { id: "portal-r2",      source: "portal",    target: "r2",         ...edgeBase, style: { ...edgeBase.style, stroke: C.blue, strokeDasharray: "5 3" }, label: "upload direto", labelStyle: { fill: C.textDim, fontSize: 10 } },
+  { id: "portal-r2",  source: "portal",     target: "r2",         ...edgeBase,
+    style: { ...edgeBase.style, stroke: C.blue, strokeDasharray: "5 3" },
+    label: "upload direto", labelStyle: { fill: C.textDim, fontSize: 10 } },
 ];
 
 /* ─── diagram ─────────────────────────────────────── */
