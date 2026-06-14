@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import type { Module, ModuleSummary } from "@/lib/types";
+import type { Module, ModuleSummary, Decision } from "@/lib/types";
 import { CATEGORY_LABEL, featureCategory, type Category } from "@/lib/category";
 
-type FilterKey = "all" | Category;
+type FilterKey = "all" | Category | Decision;
 
 interface Props {
   module: Module;
@@ -31,9 +31,12 @@ const REMOVED_VISUAL_H = 6;
 export function ModuleCard({ module, summary, filter }: Props) {
   const [open, setOpen] = useState(false);
 
-  const visibleFeatures = module.features.filter(
-    (f) => filter === "all" || featureCategory(f) === filter
-  );
+  const DECISIONS: Decision[] = ["included", "deferred", "removed"];
+  const visibleFeatures = module.features.filter((f) => {
+    if (filter === "all") return true;
+    if (DECISIONS.includes(filter as Decision)) return f.decision === filter;
+    return featureCategory(f) === filter;
+  });
 
   if (visibleFeatures.length === 0) return null;
 
