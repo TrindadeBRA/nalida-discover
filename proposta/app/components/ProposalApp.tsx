@@ -8,6 +8,7 @@ import { CATEGORY_LABEL, type Category } from "@/lib/category";
 import { ModuleCard } from "./ModuleCard";
 import { SprintPlan } from "./SprintPlan";
 import { DeliveryValue } from "./DeliveryValue";
+import { PaymentSchedule } from "./PaymentSchedule";
 
 type FilterKey = "all" | Category;
 type SaveState = "idle" | "saving" | "saved" | "error";
@@ -248,9 +249,24 @@ export function ProposalApp({ initialData, archDiagram }: { initialData: MvpData
             <div className="kpi__value">
               {formatCurrency(totals.estimatedCost, project.currency)}
             </div>
-            <div className="kpi__hint">
-              {formatCurrency(project.hourlyRate, project.currency)}/hora
-            </div>
+            {edit ? (
+              <div className="kpi__rate-edit">
+                <span>{project.currency}</span>
+                <input
+                  type="number"
+                  min={0}
+                  value={project.hourlyRate}
+                  onChange={(e) =>
+                    patchProject({ hourlyRate: Number(e.target.value) })
+                  }
+                />
+                <span>/hora</span>
+              </div>
+            ) : (
+              <div className="kpi__hint">
+                {formatCurrency(project.hourlyRate, project.currency)}/hora
+              </div>
+            )}
           </div>
           <div className="kpi kpi--links">
             <div className="kpi__label">Links úteis</div>
@@ -304,6 +320,8 @@ export function ProposalApp({ initialData, archDiagram }: { initialData: MvpData
             </div>
           </div>
         </section>
+
+        <PaymentSchedule total={totalsAll.estimatedCost} currency={project.currency} />
       </div>
 
       <footer className="footer">

@@ -16,7 +16,7 @@
     "currency": "BRL",
     "sheetId": "1I-L9yvpaWduEiCHTM3GkfhvrfYU1kg9h-nCtK_9scT8",
     "sheetGid": "552375468",
-    "lastSyncedAt": "2026-06-14T16:38:55.182Z"
+    "lastSyncedAt": "2026-06-21T22:49:59.594Z"
   },
   "legend": {
     "included": "Faz parte do MVP — será desenvolvido nesta fase",
@@ -65,7 +65,7 @@
           "name": "Cadastro de novo usuário (e-mail + dados pessoais)",
           "decision": "included",
           "complexity": "M",
-          "hours": 6
+          "hours": 5
         },
         {
           "code": "1.6",
@@ -674,7 +674,7 @@
           "name": "Adicionar cartão de crédito",
           "decision": "included",
           "complexity": "M",
-          "hours": 2
+          "hours": 4
         },
         {
           "code": "10.6",
