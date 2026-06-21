@@ -188,6 +188,39 @@ export function ProposalApp({ initialData, archDiagram }: { initialData: MvpData
           </div>
         )}
 
+        <section className="section">
+          <div className="section__head">
+            <h2 className="section__title">Escopo por módulo</h2>
+            <p className="section__sub">
+              Os módulos e funcionalidades vêm da planilha. Filtre por decisão e
+              expanda cada módulo para ver as horas e observações.
+            </p>
+          </div>
+
+          <div className="filters">
+            {FILTERS.map((f) => (
+              <button
+                key={f.key}
+                className="filter-btn"
+                data-active={filter === f.key}
+                onClick={() => setFilter(f.key)}
+              >
+                {f.cat && <span className={`dot dot--${f.cat}`} />}
+                {f.label}
+              </button>
+            ))}
+          </div>
+
+          {data.modules.map((module) => (
+            <ModuleCard
+              key={module.id}
+              module={module}
+              summary={summaries[module.id]}
+              filter={filter}
+            />
+          ))}
+        </section>
+
         <section className="kpis">
           <div className="kpi">
             <div className="kpi__label">
@@ -264,39 +297,6 @@ export function ProposalApp({ initialData, archDiagram }: { initialData: MvpData
               </a>
             </div>
           </div>
-        </section>
-
-        <section className="section">
-          <div className="section__head">
-            <h2 className="section__title">Escopo por módulo</h2>
-            <p className="section__sub">
-              Os módulos e funcionalidades vêm da planilha. Filtre por decisão e
-              expanda cada módulo para ver as horas e observações.
-            </p>
-          </div>
-
-          <div className="filters">
-            {FILTERS.map((f) => (
-              <button
-                key={f.key}
-                className="filter-btn"
-                data-active={filter === f.key}
-                onClick={() => setFilter(f.key)}
-              >
-                {f.cat && <span className={`dot dot--${f.cat}`} />}
-                {f.label}
-              </button>
-            ))}
-          </div>
-
-          {data.modules.map((module) => (
-            <ModuleCard
-              key={module.id}
-              module={module}
-              summary={summaries[module.id]}
-              filter={filter}
-            />
-          ))}
         </section>
       </div>
 
