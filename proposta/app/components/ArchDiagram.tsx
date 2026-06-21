@@ -213,7 +213,7 @@ function Diagram() {
   );
 
   return (
-    <div style={{ width: "100%", height: 780 }}>
+    <div className="arch-flow">
       <ReactFlow
         nodes={nodes}
         edges={edges}

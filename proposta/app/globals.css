@@ -651,6 +651,10 @@ a {
   .arch-section {
     padding: 24px 0;
   }
+
+  .arch-flow {
+    height: 560px;
+  }
 }
 
 /* Mobile (≤ 520px) */
@@ -853,6 +857,10 @@ a {
 
   .arch-sub {
     font-size: 13px;
+  }
+
+  .arch-flow {
+    height: 420px;
   }
 
   /* Params edit mode */
@@ -1187,6 +1195,11 @@ textarea.inline-input {
   font-size: 14px;
   margin-bottom: 20px;
   max-width: 640px;
+}
+
+.arch-flow {
+  width: 100%;
+  height: 780px;
 }
 
 /* React Flow overrides */
