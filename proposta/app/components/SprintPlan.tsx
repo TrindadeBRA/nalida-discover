@@ -159,7 +159,6 @@ const PLAN: Month[] = [
         n: 8,
         weeks: "Semanas 15–16",
         title: "Notificações, dashboard & estabilização",
-        hours: 46,
         focus: [
           "E-mails transacionais (reserva, boas-vindas, lembretes)",
           "Dashboard de métricas e telas de backoffice (admin)",

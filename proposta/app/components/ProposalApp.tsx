@@ -7,6 +7,7 @@ import { updateProject } from "@/lib/mutations";
 import { CATEGORY_LABEL, type Category } from "@/lib/category";
 import { ModuleCard } from "./ModuleCard";
 import { SprintPlan } from "./SprintPlan";
+import { DeliveryValue } from "./DeliveryValue";
 
 type FilterKey = "all" | Category;
 type SaveState = "idle" | "saving" | "saved" | "error";
@@ -223,6 +224,8 @@ export function ProposalApp({ initialData, archDiagram }: { initialData: MvpData
         </section>
 
         <SprintPlan totalHours={totalsAll.includedHours} />
+
+        <DeliveryValue />
 
         <section className="kpis">
           <div className="kpi">
